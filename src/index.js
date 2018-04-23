@@ -9,11 +9,11 @@ import {
 } from 'react-router-dom';
 
 import MediaQuery from 'react-responsive';
-import PCMain from './components/pc_main';
-import MobileMain from './components/mobile_main';
+import PCMain from './components/pc/pc_main';
+import MobileMain from './components/mobile/mobile_main';
 
 import style from "./css/main.css";
-//import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 export default class App extends React.Component{
   render(){
