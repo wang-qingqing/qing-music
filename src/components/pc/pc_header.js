@@ -17,7 +17,7 @@ class PCHeader extends React.Component{
     render(){
         return (
             <Header className="header">
-                <div className="main_width">
+                <div className="main_area">
                     <div className="logo"></div>
                     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{lineHeight: '64px'}}>
                         <Menu.Item key="1">发现音乐</Menu.Item>

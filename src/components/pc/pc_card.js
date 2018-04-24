@@ -1,11 +1,40 @@
 import React from 'react';
-import {Card} from 'antd';
+import {Card,Avatar,Icon} from 'antd';
+const {Meta} = Card;
 
+const cardStyle = {
+    width: 160,
+    display: 'inline-block',
+    margin: '0 3px',
+    marginBottom: '15px'
+}
+
+const cardBodyStyle = {
+    padding: '5px 0px',
+    height: '50px'
+}
 class PCCard extends React.Component{
+    //播放音乐
+    play(){
+        alert("paly music")
+    }
+
     render(){
         return (
-            <Card title="Card title" extra={<a href="#">More</a>} style={{width: 300}}>
-                <p>1111</p>
+            <Card style={cardStyle}  
+                bodyStyle={cardBodyStyle} 
+                cover={<img title={this.props.cardTitle} src={this.props.cardSrc} />} 
+                actions={[
+                    <div style={{textAlign: 'left'}}>
+                        <Icon type="sound" />
+                        <span style={{paddingLeft: '5px'}}>{this.props.cardListen}</span>
+                    </div>,
+                    <Icon type="play-circle-o" onClick={this.play.bind(this)} />
+                ]} >
+
+                <a title={this.props.cardTitle} className="card-name">
+                    <div className="card-name-text">{this.props.cardTitle}</div>
+                </a>
             </Card>
         )
     }

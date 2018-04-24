@@ -6,6 +6,7 @@ import {
 } from 'antd';
 const {Header,Content,Footer,Sider} = Layout;
 import PCCollapse from './pc_collapse';
+import PCSide from './side/pc_side';
 
 //定义轮播图的图片地址
 const imageUrls = [
@@ -31,8 +32,9 @@ class PCContent extends React.Component{
                         下载客户端(二维码)
                     </div>
                 </div>
-                <div className="main_width">
+                <div className="main_area">
                    <PCCollapse />
+                   <PCSide />
                 </div>
             </Content>
         )
