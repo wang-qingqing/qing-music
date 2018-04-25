@@ -74,10 +74,7 @@
     border-bottom: 1px solid #cdcdcd;
 }
 .userCard_top{
-    height: 120px;
-}
-.userCard_top .imageLink{
-    
+    height: 100px;
 }
 .userCard_top .head{
     float: left;
@@ -128,5 +125,58 @@
     padding-right: 0px;
     border-right: none;
 }
-
+.userCard_bottom a{
+    color: #333;
+}
+.userCard_bottom strong{
+    font-size: 20px;
+}
+.userCard_bottom div{
+    font-size: 13px;
+}
+.personList{
+    height: 500px;
+    margin: 10px;
+}
+.personList .showMore{
+    float: right;
+}
+.personList .underline{
+    border-top: 1px solid #ccc;
+    margin: 5px 0;
+}
+.singerItem{
+    height: 60px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    background-color: #fafafa;
+}
+.singerItem .head{
+    float: left;
+    width: 62px;
+    height: 62px;
+}
+.singerItem .head .headImage{
+    width: 60px;
+    height: 60px;
+}
+.singerItem .info{
+    float: left;
+    width: 200px;
+    height: 60px;
+    padding-left: 14px;
+    border: 1px solid #e9e9e9;
+    border-left: none;
+}
+.singerItem .info strong{
+    margin-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.singerItem .info p{
+    margin-top: 8px;
+    color: #666;
+}
 /*MOBILE端*/
