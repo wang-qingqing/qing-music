@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom'; 
 import {
    Layout,
-   Carousel 
+   Carousel,
+   BackTop 
 } from 'antd';
 const {Header,Content,Footer,Sider} = Layout;
 import PCCollapse from './pc_collapse';
@@ -28,14 +29,19 @@ class PCContent extends React.Component{
                             })
                         }
                     </Carousel>
-                    <div className="download">
-                        下载客户端(二维码)
-                    </div>
+                    {/* 这块暂时不展示 */
+                        1==2?
+                            <div className="download">
+                                下载客户端(二维码)
+                            </div>
+                        :''       
+                    }                    
                 </div>
                 <div className="main_area">
                    <PCCollapse />
                    <PCSide />
                 </div>
+                <BackTop />
             </Content>
         )
     }

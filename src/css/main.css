@@ -14,10 +14,16 @@
     /* width: 1000px; */
     /* margin: 0 auto; */
 }
+.text-ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
 .main_area{
     position: relative;
     width: 1000px;
-    min-height: 300px;
+    min-height: 1200px;
     margin: 0 auto;
     background-color: #fff;
 }
@@ -37,9 +43,10 @@
     overflow: hidden;
 }
 .carousel img{
-    width: 700px;
+    width: 1000px;
     height: 300px;
 }
+/**下载客户端**/
 .download{
     position: absolute;
     width: 300px;
@@ -59,6 +66,14 @@
     height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: auto 5px;
+}
+.showMoreList{
+    position: absolute;
+    top: 15px;
+    right: 320px;
+    color: #666;
+    font-size: 12px;
 }
 .side-content{
     position: absolute;
@@ -135,21 +150,27 @@
     font-size: 13px;
 }
 .personList{
-    height: 500px;
+    float: left;
+    max-height: 500px;
     margin: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
 }
 .personList .showMore{
     float: right;
 }
 .personList .underline{
+    width: 280px;
     border-top: 1px solid #ccc;
     margin: 5px 0;
 }
 .singerItem{
-    height: 60px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
+    float: left;
+    width: 100%;
+    height: 62px;
+    margin-top: 15px;
     background-color: #fafafa;
+    border: 1px solid #e9e9e9;
 }
 .singerItem .head{
     float: left;
@@ -162,21 +183,17 @@
 }
 .singerItem .info{
     float: left;
-    width: 200px;
+    width: 210px;
     height: 60px;
     padding-left: 14px;
-    border: 1px solid #e9e9e9;
-    border-left: none;
 }
 .singerItem .info strong{
-    margin-top: 8px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
+    font-size: 14px;
 }
 .singerItem .info p{
-    margin-top: 8px;
+    margin-top: 5px;
     color: #666;
+    font-size: 12px;
 }
+
 /*MOBILE端*/
