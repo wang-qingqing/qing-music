@@ -196,4 +196,77 @@
     font-size: 12px;
 }
 
+.albumContainer{
+    position: relative;
+    height: 200px;
+    margin: 15px 0;
+    border: 1px solid #e9e9e9;
+}
+.albumContainer .pre,.albumContainer .next{
+    position: absolute;
+    top: 71px;
+    width: 17px;
+    height: 17px;
+}
+.albumContainer .pre{
+    left: 8px;
+}
+.albumContainer .roll{
+    position: relative;
+    float: left;
+    width: 645px;
+    height: 180px;
+    overflow: hidden;
+}
+.albumContainer ul{
+    position: absolute;
+    top: 0;
+    width: 645px;
+    margin: 28px 0 0 0;
+}
+.albumContainer li{
+    list-style: none;
+    float: left;
+    display: inline;
+    width: 118px;
+    height: 150px;
+    margin-left: 11px;
+    background-position: -260px 100px;
+}
+.albumContainer .cover{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.albumContainer .cover-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.albumContainer .msk{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 118px;
+    height: 100px;
+    background: url(../images/album/background.png) no-repeat;
+}
+.albumContainer .play{
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+.albumContainer .play:hover{
+    display: block;
+}
+.albumContainer p{
+    font-size: 12px;
+    margin: 5px auto 0;
+    line-height: 18px;
+}
+.albumContainer .space{
+    padding: auto 5px;
+}
 /*MOBILE端*/
