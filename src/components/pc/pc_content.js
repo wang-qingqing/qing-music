@@ -22,7 +22,7 @@ class PCContent extends React.Component{
                 <div className="topContent">
                     <Carousel className="carousel" autoplay>
                         {
-                            imageUrls.map(function(url,index){
+                            imageUrls.map((url,index) => {
                                 return (
                                     <div key={index}> <img src={url} /></div>
                                 )                             

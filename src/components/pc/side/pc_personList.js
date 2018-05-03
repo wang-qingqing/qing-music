@@ -20,7 +20,7 @@ class PCPersonList extends React.Component{
                 <div>
                     {   
                         this.props.itemList?
-                            this.props.itemList.map(function(item,index){
+                            this.props.itemList.map((item,index) => {
                                 return (
                                     <PCItem key={index} userId={item.userId} name={item.name} description={item.description} headSrc={item.headSrc} />
                                 )
