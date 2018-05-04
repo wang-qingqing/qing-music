@@ -13,6 +13,7 @@ import PCMain from './components/pc/pc_main';
 import MobileMain from './components/mobile/mobile_main';
 
 import 'antd/dist/antd.css';
+import PCTopList from "./components/pc/pc_topList";
 
 export default class App extends React.Component{
   render(){
@@ -22,6 +23,7 @@ export default class App extends React.Component{
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={PCMain}></Route>
+                    <Route path="/list" component={PCTopList}></Route>
               </Switch>
             </BrowserRouter>
         </MediaQuery>

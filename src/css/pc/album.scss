@@ -9,31 +9,33 @@ $image-context: '../../images';
     border: 1px solid $border-color;
     background: #f5f5f5;
 
-    .pre,.albumContainer .next{
+    .pre,.next{
         position: absolute;
         top: 71px;
         width: 17px;
         height: 17px;
+        font-size: 17px;
     }
 
     .pre{
-        left: 8px;
+        left: 3px;
     }
 
     .roll{
         position: relative;
         float: left;
-        width: 645px;
+        width: 630px;
         height: 180px;
+        margin-left: 15px;
         overflow: hidden;
     }
 
     ul{
         position: absolute;
         top: 0;
-        width: 650px;
+        width: 630px;
         margin: 30px 0 0 0;
-        padding-left: 17px;
+        padding-left: 0px;
     }
 
     li{
@@ -62,10 +64,10 @@ $image-context: '../../images';
     .msk{
         position: absolute;
         top: 0;
-        left: 100px;
+        left: 0;
         width: 118px;
         height: 100px;
-        background: url($image-context+'/album/side.png') no-repeat;
+        background: url($image-context+'/album/background.png') no-repeat;
     }
 
     .play{

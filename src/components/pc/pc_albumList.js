@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from 'antd';
+import {Icon,message} from 'antd';
 
 import '../../css/pc/album.scss';
 
@@ -67,8 +67,9 @@ const albumList = [
 
 class PCAlbumList extends React.Component{
     play(){
-        alert("play music");
+        message.info('play music');
     }
+
     //也可以通过绑定事件来处理，方法如下：
     // componentDidMount() {
     //     document.querySelector('.play').addEventListener('click', e => {
@@ -81,10 +82,18 @@ class PCAlbumList extends React.Component{
     //     document.querySelector('.play').removeEventListener('click');
     // }
 
+    pre(){
+        message.info('往前点击');
+    }
+
+    next(){
+        message.info('往后点击');
+    }
+
     render(){
         return (
             <div className="albumContainer">
-                <a className="pre card-name"><Icon type="left" /></a>
+                <a className="pre card-name"><Icon type="double-left" onClick={this.pre.bind(this)} /></a>
                 <div className="roll">
                     <ul>
 
@@ -93,9 +102,10 @@ class PCAlbumList extends React.Component{
                                let albumUrl = "/album?id=" + album.id;
                                 return (
                                     <li key={index}>
-                                        <div className="cover">     
-                                            <img className="cover-img" src={album.coverSrc}/>                 
-                                            <a title={album.name} href={albumUrl} className="msk card-name"></a>
+                                        <div className="cover">                                                           
+                                            <a title={album.name} href={albumUrl} className="msk card-name">
+                                                <img className="cover-img" src={album.coverSrc}/>  
+                                            </a>
                                             <a title="播放" className="play card-name" onClick={this.play.bind(this)}>
                                                 <Icon type="play-circle" className="playIcon"/>
                                             </a>
@@ -128,7 +138,7 @@ class PCAlbumList extends React.Component{
                         
                     </ul>
                 </div>
-                <a className="next card-name"><Icon type="right" /></a>
+                <a className="next card-name"><Icon type="double-right" onClick={this.next.bind(this)} /></a>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card,Avatar,Icon} from 'antd';
+import {Card,Avatar,Icon,message} from 'antd';
 
 const {Meta} = Card;
 
@@ -17,7 +17,7 @@ const cardBodyStyle = {
 class PCCard extends React.Component{
     //播放音乐
     play(){
-        alert("paly music")
+        message.info("paly music")
     }
 
 
