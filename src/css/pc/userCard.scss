@@ -1,0 +1,81 @@
+/**用户信息卡**/
+.userCard_area{
+    height: 200px;
+    padding-top: 20px;
+    border-bottom: 1px solid #cdcdcd;
+
+    .userCard_top{
+        height: 100px;
+    
+        .head{
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-left: 20px;
+            padding: 2px;
+            border: 1px solid #dadada;
+        }
+    
+        .info{
+            float: left;
+            width: 115px;
+            margin-left: 18px;
+            padding-top: 3px;
+    
+            .name{
+                width: auto;
+                max-width: 100%;
+                vertical-align: middle;
+            }
+    
+            .level{
+                display: inline-block;
+                height: 17px;
+                overflow: hidden;
+                padding: 0 5px;
+                line-height: 18px;
+                color: #999;
+                font-weight: bold;
+                font-style: italic;
+                vertical-align: middle;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        }
+    
+    }
+    
+    .userCard_bottom{
+        height: 50px;
+        
+        li{
+            list-style: none;
+            float: left;
+            height: 40px;
+            padding: 0 18px;
+            border-right: 1px solid #e4e4e4;
+    
+            &.first{
+                padding-left: 0px;
+            }
+    
+            &.last{
+                padding-right: 0px;
+                border-right: none;
+            }
+        }
+    
+        a{
+            color: #333;
+        }
+    
+        strong{
+            font-size: 20px;
+        }
+    
+        div{
+            font-size: 13px;
+        }
+    
+    }
+}

@@ -2,6 +2,9 @@ import React from 'react';
 import PCHeader from './pc_header';
 import PCContent from './pc_content';
 import {Layout} from 'antd';
+
+import "../../css/pc/index.scss";
+
 const {Footer} = Layout;
 
 export default class PCIndex extends  React.Component{

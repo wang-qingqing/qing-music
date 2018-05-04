@@ -1,6 +1,8 @@
 import React from 'react';
 import {Icon} from 'antd';
 
+import '../../css/pc/album.scss';
+
 const albumList = [
     {
         id: 1,
@@ -95,7 +97,7 @@ class PCAlbumList extends React.Component{
                                             <img className="cover-img" src={album.coverSrc}/>                 
                                             <a title={album.name} href={albumUrl} className="msk card-name"></a>
                                             <a title="播放" className="play card-name" onClick={this.play.bind(this)}>
-                                                <Icon type="play-circle-o" className="playIcon"/>
+                                                <Icon type="play-circle" className="playIcon"/>
                                             </a>
                                         </div>
                                         <p className="albumName text-ellipsis">

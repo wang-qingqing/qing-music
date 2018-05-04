@@ -7,8 +7,7 @@ class PCCollapseContent extends React.Component{
 
     render(){
         let item = this.props.item;
-        console.log(item);
-        
+               
         if(item.type == 1){
                 return (
                     item.cardList.map((card,index) => {

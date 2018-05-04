@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card,Avatar,Icon} from 'antd';
+
 const {Meta} = Card;
 
 const cardStyle = {
@@ -18,6 +19,7 @@ class PCCard extends React.Component{
     play(){
         alert("paly music")
     }
+
 
     render(){
         return (

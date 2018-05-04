@@ -12,7 +12,6 @@ import MediaQuery from 'react-responsive';
 import PCMain from './components/pc/pc_main';
 import MobileMain from './components/mobile/mobile_main';
 
-import style from "./css/main.css";
 import 'antd/dist/antd.css';
 
 export default class App extends React.Component{
