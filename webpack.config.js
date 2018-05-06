@@ -2,6 +2,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  devServer:{
+    historyApiFallback: true  //可以查看页面的报错信息,并且所有路径都会执行index.html
+  },
   module: {
     rules: [
         {
