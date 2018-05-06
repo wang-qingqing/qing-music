@@ -23,7 +23,8 @@ export default class App extends React.Component{
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={PCMain}></Route>
-                    <Route path="/list" component={PCTopList}></Route>
+                    <Route exact path="/list" component={PCTopList}></Route>
+                    <Route exact path="/user/home" component={PCTopList}></Route>
               </Switch>
             </BrowserRouter>
         </MediaQuery>

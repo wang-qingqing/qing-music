@@ -9,6 +9,10 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": "^5.0.0"
+  },
   "dependencies": {
     "antd": "^3.4.1",
     "autoprefixer": "^8.3.0",
