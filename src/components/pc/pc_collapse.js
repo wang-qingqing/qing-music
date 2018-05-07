@@ -173,4 +173,4 @@ class PCCollapse extends React.Component{
 }
 
 
-export default PCCollapse = PCCollapse;
+export default PCCollapse;

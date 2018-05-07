@@ -2,9 +2,13 @@ import React from 'react';
 import {Card,Avatar} from 'antd';
 const { Meta } = Card;
 
-import '../../../css/pc/singerItem.scss';
+import '../../../style/pc/singerItem.scss';
 
 class PCItem extends React.Component{
+    constructor(){
+        super();
+    }
+    
     render(){
         return (
             <a className="singerItem card-name" href="/user/home">
@@ -20,4 +24,4 @@ class PCItem extends React.Component{
     }
 }
 
-export default PCItem = PCItem;
+export default PCItem;

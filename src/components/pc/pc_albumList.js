@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon,message} from 'antd';
 
-import '../../css/pc/album.scss';
+import '../../style/pc/album.scss';
 
 const albumList = [
     {
@@ -144,4 +144,4 @@ class PCAlbumList extends React.Component{
     }
 }   
 
-export default PCAlbumList = PCAlbumList;
+export default PCAlbumList;

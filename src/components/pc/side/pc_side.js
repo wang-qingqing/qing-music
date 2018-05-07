@@ -82,4 +82,4 @@ class PCSide extends React.Component{
     }
 }
 
-export default PCSide = PCSide;
+export default PCSide;

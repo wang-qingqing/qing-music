@@ -3,6 +3,10 @@ import {Icon} from 'antd';
 import PCItem from './pc_item';
 
 class PCPersonList extends React.Component{
+    constructor(){
+        super();
+    }
+    
     render(){
         return (
             <div className="personList">
@@ -33,4 +37,4 @@ class PCPersonList extends React.Component{
     }
 }
 
-export default PCPersonList = PCPersonList;
+export default PCPersonList;

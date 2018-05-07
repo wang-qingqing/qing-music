@@ -4,7 +4,10 @@ import PCAlbumList from './pc_albumList';
 import PCTopList from './pc_topList';
 
 class PCCollapseContent extends React.Component{
-
+    constructor(){
+        super();
+    }
+    
     render(){
         let item = this.props.item;
                
@@ -32,4 +35,4 @@ class PCCollapseContent extends React.Component{
     }
 }   
 
-export default PCCollapseContent = PCCollapseContent;
+export default PCCollapseContent;

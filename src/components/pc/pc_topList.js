@@ -10,4 +10,4 @@ class PCTopList extends React.Component{
     }
 }   
 
-export default PCTopList = PCTopList;
+export default PCTopList;

@@ -47,4 +47,4 @@ class PCContent extends React.Component{
     }
 }
 
-export default PCContent = PCContent;
+export default PCContent;

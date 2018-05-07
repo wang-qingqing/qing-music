@@ -33,4 +33,4 @@ class PCHeader extends React.Component{
     }
 }
 
-export default PCHeader = PCHeader;
+export default PCHeader;

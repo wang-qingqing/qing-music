@@ -42,4 +42,4 @@ class PCCard extends React.Component{
     }
 }
 
-export default PCCard = PCCard;
+export default PCCard;

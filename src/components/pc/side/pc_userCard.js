@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Button,Tag} from 'antd';
 
-import "../../../css/pc/userCard.scss";
+import "../../../style/pc/userCard.scss";
 
 class PCUserCard extends React.Component{
     constructor(props){
@@ -79,4 +79,4 @@ class PCUserCard extends React.Component{
     }
 }
 
-export default PCUserCard = PCUserCard;
+export default PCUserCard;

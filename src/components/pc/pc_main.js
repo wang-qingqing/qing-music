@@ -3,7 +3,7 @@ import PCHeader from './pc_header';
 import PCContent from './pc_content';
 import {Layout} from 'antd';
 
-import "../../css/pc/index.scss";
+import "../../style/pc/index.scss";
 
 const {Footer} = Layout;
 
