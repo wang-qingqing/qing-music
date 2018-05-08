@@ -47,7 +47,18 @@
 
   解决路由跳转的问题。
 
-  (4)参考文档：
+  (4)为了支持es7,需要增加三个依赖：(mobx需要)
+  
+      "babel-plugin-transform-decorators"
+      "babel-plugin-transform-decorators-legacy"
+      "babel-preset-stage-1"
+
+  并且：(!!!注意)
+  
+    A. presets的顺序必须是react -> env -> stage-1
+    B. plugins的顺序必须是 transform-decorators-legacy   ->  transform-decorators
+
+  (5)参考文档：
 
     A. webpack踩坑之路 (2)——图片的路径与打包 ：
        https://www.cnblogs.com/ghost-xyx/p/5812902.html
@@ -77,8 +88,17 @@
     （凌晨一点多试了好几回都报错，中午十二点竟然就好了，不太清楚是什么原因，
     可能是我中午执行这条命令的时候，忘了开Shadowsocks代理服务器了，数据源不一样吧。）
   
+4、mobx的总结：
 
+  (1)使用ES7的Decorators语法时，VSCode编辑器报错：
 
+      在“文件 -> 首选项 -> 设置”中，搜索“experimentalDecorators”，
+      增加一句配置：
+      "javascript.implicitProjectConfig.experimentalDecorators": true
+
+  (2)
+
+ 
 
 
 

@@ -25,10 +25,13 @@ module.exports = {
                                 "targets": {
                                     "browsers": ["last 2 versions", "safari >= 7", "iOS >= 8"]
                                 }
-                            }]                   
+                            }],
+                            'stage-1'                  
                         ],
                         "plugins": [
-                            "transform-runtime"
+                            "transform-runtime",
+                            "transform-decorators-legacy",
+                            "transform-decorators"                
                         ]
                     }
                 }
@@ -83,21 +86,3 @@ module.exports = {
         poll: 1000 // 每秒询问的文件变更的次数
     }
 };
-
-if (env === 'production') {
-    module.exports.optimization = {
-      minimizer: [
-        new UglifyJsPlugin({
-          cache: true,
-          parallel: true,
-          uglifyOptions: {
-            compress: true,
-            ecma: 6,
-            mangle: true
-          },
-          sourceMap: true
-        })
-      ]
-    };
-}
-  
