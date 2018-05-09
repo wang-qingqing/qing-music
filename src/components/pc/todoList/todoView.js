@@ -1,5 +1,5 @@
 import React from 'react';
-import {Checkbox,Input,Button} from 'antd';
+import {Checkbox,Input,Button,message} from 'antd';
 import {observer} from 'mobx-react';
 
 
@@ -8,14 +8,20 @@ class TodoView extends React.Component{
     constructor(){
         super()
     }
-    
+
     changeItems(e){
         console.log('todo',e.target.checked);
     }
 
     //添加待办事项
-    addTodoItem(e){   
-        this.props.todoStore.addTodo(document.querySelector("#addTodo").value);
+    addTodoItem(e){  
+        let addInput = document.querySelector("#addTodo");
+        if(addInput.value != ''){
+            this.props.todoStore.addTodo(addInput.value);
+            addInput.value = '';//清空输入框的值
+        }else{
+            message.error("请输入待办事项");
+        }   
     }
 
     render(){

@@ -8,6 +8,7 @@ module.exports = {
         publicPath: '/' //表示资源的发布地址，当配置过该属性后，打包文件中所有通过相对路径引用的资源都会被配置的路径所替换。
     },
     devServer:{
+        //port: 666, //自定义端口号，默认是8080
         historyApiFallback: true,  //可以查看页面的报错信息,并且所有路径都会执行index.html
         compress: true // 开发服务器是否启动gzip等压缩
     },

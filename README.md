@@ -88,7 +88,7 @@
     （凌晨一点多试了好几回都报错，中午十二点竟然就好了，不太清楚是什么原因，
     可能是我中午执行这条命令的时候，忘了开Shadowsocks代理服务器了，数据源不一样吧。）
   
-4、mobx的总结：
+4、mobx4的总结：
 
   (1)使用ES7的Decorators语法时，VSCode编辑器报错：
 
@@ -96,7 +96,15 @@
       增加一句配置：
       "javascript.implicitProjectConfig.experimentalDecorators": true
 
-  (2)
+  (2)参考文档
+
+    A.官方文档
+      https://cn.mobx.js.org/
+
+    B.一篇关于mobx介绍的博客：（推荐先看这个，比较浅显易懂）
+      https://qiutc.me/post/efficient-mobx.html
+  
+
 
  
 
