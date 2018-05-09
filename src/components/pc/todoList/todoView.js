@@ -1,7 +1,6 @@
 import React from 'react';
 import {Checkbox,Input,Button} from 'antd';
 import {observer} from 'mobx-react';
-import TodoStore from '../../../store/todoStore';
 
 
 @observer
@@ -9,6 +8,7 @@ class TodoView extends React.Component{
     constructor(){
         super()
     }
+    
     changeItems(e){
         console.log('todo',e.target.checked);
     }

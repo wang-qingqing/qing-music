@@ -2,13 +2,13 @@ import React from 'react';
 import PCHeader from '../pc_header';
 import TodoView from '../todoList/todoView';
 import {Layout} from 'antd';
-import TodoStore from '../../../store/todoStore';
+import Store from '../../../store/store';
 
 import "../../../style/pc/index.scss";
 
 const {Footer} = Layout;
 
-const todoStore = new TodoStore();
+const todoStore = new Store.todoStore();
 export default class PCTodoItems extends  React.Component{
     render(){
         return (          

@@ -1,7 +1,7 @@
 import todoStore from './todoStore';
 
-const store = {
+const Store = {
     todoStore //待办事情
 };
 
-export default store;
+export default Store;
