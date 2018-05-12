@@ -98,42 +98,44 @@ class PCAlbumList extends React.Component{
                     <ul>
 
                         {
-                           albumList.map((album,index)=>{
-                               let albumUrl = "/album?id=" + album.id;
-                                return (
-                                    <li key={index}>
-                                        <div className="cover">                                                           
-                                            <a title={album.name} href={albumUrl} className="msk card-name">
-                                                <img className="cover-img" src={album.coverSrc}/>  
-                                            </a>
-                                            <a title="播放" className="play card-name" onClick={this.play.bind(this)}>
-                                                <Icon type="play-circle" className="playIcon"/>
-                                            </a>
-                                        </div>
-                                        <p className="albumName text-ellipsis">
-                                            <a className="card-name" href={albumUrl} title={album.name}>{album.name}</a>
-                                        </p>
-                                        <p className="singer text-ellipsis">
-                                            {
-                                               album.singers.length ?
-                                                    album.singers.map((singer,k) => {
-                                                        return (
-                                                            <span key={k}>
-                                                                <a className="card-name" href={"/artist?id="+singer.id}>{singer.name}</a>
-                                                                {
-                                                                    k == album.singers.length-1
-                                                                    ?''
-                                                                    :<span className="space">/</span>
-                                                                }
-                                                            </span>
-                                                        )
-                                                    })
-                                                :''                                      
-                                            }                                    
-                                        </p>
-                                    </li>
-                                )
-                           }) 
+                            albumList.length?
+                                albumList.map((album,index)=>{
+                                    let albumUrl = "/album?id=" + album.id;
+                                    return (
+                                        <li key={index}>
+                                            <div className="cover">                                                           
+                                                <a title={album.name} href={albumUrl} className="msk card-name">
+                                                    <img className="cover-img" src={album.coverSrc}/>  
+                                                </a>
+                                                <a title="播放" className="play card-name" onClick={this.play.bind(this)}>
+                                                    <Icon type="play-circle" className="playIcon"/>
+                                                </a>
+                                            </div>
+                                            <p className="albumName text-ellipsis">
+                                                <a className="card-name" href={albumUrl} title={album.name}>{album.name}</a>
+                                            </p>
+                                            <p className="singer text-ellipsis">
+                                                {
+                                                album.singers.length ?
+                                                        album.singers.map((singer,k) => {
+                                                            return (
+                                                                <span key={k}>
+                                                                    <a className="card-name" href={"/artist?id="+singer.id}>{singer.name}</a>
+                                                                    {
+                                                                        k == album.singers.length-1
+                                                                        ?''
+                                                                        :<span className="space">/</span>
+                                                                    }
+                                                                </span>
+                                                            )
+                                                        })
+                                                    :''                                      
+                                                }                                    
+                                            </p>
+                                        </li>
+                                    )
+                                }) 
+                            : ''
                         }
                         
                     </ul>

@@ -22,11 +22,13 @@ class PCContent extends React.Component{
                 <div className="topContent">
                     <Carousel className="carousel" autoplay>
                         {
-                            imageUrls.map((url,index) => {
-                                return (
-                                    <div key={index}> <img src={url} /></div>
-                                )                             
-                            })
+                            imageUrls.length?
+                                imageUrls.map((url,index) => {
+                                    return (
+                                        <div key={index}> <img src={url} /></div>
+                                    )                             
+                                })
+                            : ''
                         }
                     </Carousel>
                     {/* 这块暂时不展示 */

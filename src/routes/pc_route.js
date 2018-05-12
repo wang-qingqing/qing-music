@@ -45,15 +45,17 @@ const routes = [
 class PCRoute extends React.Component{
     render(){
         return (
-            <BrowserRouter>
-                <Switch>
-                    {routes.map((route, i) => (
-                        <ExtendRoute key={i} {...route} />
-                    ))}
+            routes.length?
+                <BrowserRouter>
+                    <Switch>
+                        {routes.map((route, i) => (
+                            <ExtendRoute key={i} {...route} />
+                        ))}
 
-                    <Route component={NotFound} />
-                </Switch>
-            </BrowserRouter>
+                        <Route component={NotFound} />
+                    </Switch>
+                </BrowserRouter>
+            : ''
         )
     }
 }

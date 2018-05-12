@@ -13,11 +13,13 @@ class PCCollapseContent extends React.Component{
                
         if(item.type == 1){
                 return (
-                    item.cardList.map((card,index) => {
-                        return (
-                            <PCCard key={index} cardTitle={card.title} cardSrc={card.src} cardListen={card.listen} />
-                        )
-                    })              
+                    item.cardList.length?
+                        item.cardList.map((card,index) => {
+                            return (
+                                <PCCard key={index} cardTitle={card.title} cardSrc={card.src} cardListen={card.listen} />
+                            )
+                        }) 
+                    : ''            
                 )                                  
         }else if(item.type == 2){
             return(

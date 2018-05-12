@@ -151,20 +151,22 @@ class PCCollapse extends React.Component{
             <div style={{width: '700px'}}>
                 <Collapse defaultActiveKey={defaultActiveKey}>
                     {   
-                        panelModules.map((item) => {
-                            return (
-                                <Panel header={item.name} key={item.key} >
-                                    {
-                                        item.showMore?
-                                            <a className="showMoreList card-name" href={item.showMoreUrl}>
-                                                查看更多<Icon type="arrow-right"/>
-                                            </a>
-                                        :''
-                                    }                                       
-                                    <PCCollapseContent item={item} />
-                                </Panel>  
-                            )      
-                        })                                     
+                        panelModules.length?
+                            panelModules.map((item) => {
+                                return (
+                                    <Panel header={item.name} key={item.key} >
+                                        {
+                                            item.showMore?
+                                                <a className="showMoreList card-name" href={item.showMoreUrl}>
+                                                    查看更多<Icon type="arrow-right"/>
+                                                </a>
+                                            :''
+                                        }                                       
+                                        <PCCollapseContent item={item} />
+                                    </Panel>  
+                                )      
+                            })
+                        : ''                                    
                     }       
                 </Collapse> 
             </div>
