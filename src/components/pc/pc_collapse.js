@@ -157,7 +157,7 @@ class PCCollapse extends React.Component{
                                     <Panel header={item.name} key={item.key} >
                                         {
                                             item.showMore?
-                                                <a className="showMoreList card-name" href={item.showMoreUrl}>
+                                                <a className="showMoreList a-style" href={item.showMoreUrl}>
                                                     查看更多<Icon type="arrow-right"/>
                                                 </a>
                                             :''

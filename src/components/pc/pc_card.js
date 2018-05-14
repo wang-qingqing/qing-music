@@ -34,7 +34,7 @@ class PCCard extends React.Component{
                     <Icon type="play-circle-o" onClick={this.play.bind(this)} />
                 ]} >
 
-                <a title={this.props.cardTitle} className="card-name">
+                <a title={this.props.cardTitle} className="a-style">
                     <div className="card-name-text">{this.props.cardTitle}</div>
                 </a>
             </Card>

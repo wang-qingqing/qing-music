@@ -1,184 +1,254 @@
 import React from 'react';
-import {} from 'antd';
+import {List,Icon,message} from 'antd';
+import '../../style/pc/topList.scss';
 
 const topList = [
     {
+        id: 1,
         name: '飙升榜',
+        imgSrc: '../../src/images/common/soar.png',
         songList: [
              {
                  index: 1,
                  id: 11,
-                 name: ''
+                 name: '哑巴'
              },
              {
                  index: 2,
                  id: 12,
-                 name: ''
+                 name: '因风守梦'
              },
              {
                  index: 3,
                  id: 13,
-                 name: ''
+                 name: '庸人自扰'
              },
              {
                  index: 4,
                  id: 14,
-                 name: ''
+                 name: '安娜的橱窗'
              },
              {
                  index: 5,
                  id: 15,
-                 name: ''
+                 name: '超级喜欢你'
              },
              {
                  index: 6,
                  id: 16,
-                 name: ''
+                 name: '不一样的滋味'
              },
              {
                  index: 7,
                  id: 17,
-                 name: ''
+                 name: '识君前'
              },
              {
                  index: 8,
                  id: 18,
-                 name: ''
+                 name: '慢慢喜欢你'
              },
              {
                  index: 9,
                  id: 19,
-                 name: ''
+                 name: '我的名字'
              },
              {
                  index: 10,
                  id: 20,
-                 name: ''
+                 name: 'Skin'
              }
         ]
      },
      {
+        id: 2,
         name: '新歌榜',
+        imgSrc: '../../src/images/common/new.png',
         songList: [
              {
                  index: 1,
                  id: 21,
-                 name: ''
+                 name: '哑巴'
              },
              {
                  index: 2,
                  id: 22,
-                 name: ''
+                 name: '纸短情长'
              },
              {
                  index: 3,
                  id: 23,
-                 name: ''
+                 name: '后来的我们'
              },
              {
                  index: 4,
                  id: 24,
-                 name: ''
+                 name: '双子'
              },
              {
                  index: 5,
                  id: 25,
-                 name: ''
+                 name: '因风守梦'
              },
              {
                  index: 6,
                  id: 26,
-                 name: ''
+                 name: '往后余生原创(demo)'
              },
              {
                  index: 7,
                  id: 27,
-                 name: ''
+                 name: 'The Way I Am'
              },
              {
                  index: 8,
                  id: 28,
-                 name: ''
+                 name: '学猫叫'
              },
              {
                  index: 9,
                  id: 29,
-                 name: ''
+                 name: '我的名字'
              },
              {
                  index: 10,
                  id: 30,
-                 name: ''
+                 name: '你打不过我吧'
              }
         ]
      },
      {
+        id: 3,
         name: '原创歌曲榜',
+        imgSrc: '../../src/images/common/original.png',
         songList: [
              {
                  index: 1,
                  id: 31,
-                 name: ''
+                 name: '双子'
              },
              {
                  index: 2,
                  id: 32,
-                 name: ''
+                 name: '雨巷'
              },
              {
                  index: 3,
                  id: 33,
-                 name: ''
+                 name: '光尘'
              },
              {
                  index: 4,
                  id: 34,
-                 name: ''
+                 name: '听，我的噩梦'
              },
              {
                  index: 5,
                  id: 35,
-                 name: ''
+                 name: 'Hello Hello'
              },
              {
                  index: 6,
                  id: 36,
-                 name: ''
+                 name: 'heart'
              },
              {
                  index: 7,
                  id: 37,
-                 name: ''
+                 name: '秒秒'
              },
              {
                  index: 8,
                  id: 38,
-                 name: ''
+                 name: 'if'
              },
              {
                  index: 9,
                  id: 39,
-                 name: ''
+                 name: '去问猫耳朵'
              },
              {
                  index: 10,
                  id: 40,
-                 name: ''
+                 name: '摇晃'
              }
         ]
      }
 ]
 
 class PCTopList extends React.Component{
+    //播放
+    play(){
+        message.info('播放');
+    }
+
+    //收藏
+    collect(){
+        message.info('收藏');
+    }
+
+    //添加到播放列表
+    addToPlayList(){
+        message.info('添加到播放列表');
+    }
+
     render(){
         return (
             <div className="top_container">
                {
                     topList.length?
                         topList.map((top,index) => {
+                                let listUrl = "/discover/toplist?id=" + top.id;
+                                const itemBackgroundColor = "#e5e5e5";
+                                const indexColor = "#c10d0c";
+
                                 return (
-                                    <div key={index}>
-                                        111
+                                    <div key={index} className="block">
+                                        <List 
+                                            header={
+                                                <div className="sort_type">
+                                                    <img className="cover" src={top.imgSrc}/>
+                                                    <div className="title">
+                                                        <a className="a-style" href={listUrl}><strong>{top.name}</strong></a>
+                                                        <div className="icon-area">
+                                                            <a className="a-style" onClick={this.play.bind(this)}>
+                                                                <Icon type="play-circle-o" title="播放" />
+                                                            </a>
+                                                            <a className="a-style" onClick={this.collect.bind(this)}>
+                                                                <Icon type="folder-add" title="收藏" />
+                                                            </a>                                                                                                                       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                            size="small"
+                                            footer={<a className="a-style show-all" href={listUrl}>查看全部<Icon type="right" /></a>}
+                                            bordered
+                                            dataSource={top.songList}
+                                            renderItem={item => 
+                                                (
+                                                    <List.Item className="item-area" style={item.index%2==1?{background: itemBackgroundColor}:{}}>
+                                                        <div className="item-index" style={item.index<4?{color:indexColor}:{}}>
+                                                            {item.index}
+                                                        </div>
+                                                        <div className="item-name"> 
+                                                            <a className="a-style" href="/song/id=`${item.id}`">{item.name}</a>
+                                                        </div>
+                                                        <div className="item-operate">
+                                                            <a className="a-style" onClick={this.play.bind(this)}>
+                                                                <Icon type="play-circle-o" title="播放" />
+                                                            </a>
+                                                            <a className="a-style" onClick={this.addToPlayList.bind(this)}>
+                                                                <Icon type="plus" title="添加到播放列表" />
+                                                            </a>
+                                                            <a className="a-style" onClick={this.collect.bind(this)}>
+                                                                <Icon type="folder-add" title="收藏" />
+                                                            </a>
+                                                        </div>
+                                                    </List.Item>
+                                                )
+                                            }
+                                        />                               
                                     </div>
                                 )
                         })

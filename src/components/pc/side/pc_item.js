@@ -11,7 +11,7 @@ class PCItem extends React.Component{
     
     render(){
         return (
-            <a className="singerItem card-name" href="/user/home">
+            <a className="singerItem a-style" href="/user/home">
                 <div className="head">
                     <img  src={this.props.headSrc} className="headImage" />
                 </div>

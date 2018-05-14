@@ -107,7 +107,7 @@
 5、关于react的性能优化:
 
     请看这个：
-    https://github.com/wang-qingqing/accumulate/blob/master/%E6%A1%86%E6%9E%B6%E7%B1%BB/REACT/%E3%80%90React%E3%80%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md 
+    > https://github.com/wang-qingqing/accumulate/blob/master/%E6%A1%86%E6%9E%B6%E7%B1%BB/REACT/%E3%80%90React%E3%80%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md 
   
 
 

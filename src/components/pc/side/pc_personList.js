@@ -15,7 +15,7 @@ class PCPersonList extends React.Component{
                     {
                         this.props.showMoreUrl?
                             <span className="showMore">
-                                <a className="card-name" href={this.props.showMoreUrl}>查看更多<Icon type="right" /></a>
+                                <a className="a-style" href={this.props.showMoreUrl}>查看更多<Icon type="right" /></a>
                             </span>
                         :''
                     }    
