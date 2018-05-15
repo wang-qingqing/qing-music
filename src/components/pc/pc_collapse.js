@@ -80,65 +80,15 @@ const panelModules = [
         key: 3,
         type: 2,
         name: '新碟上架',
-        cardList: [
-            {
-                title: '标题1',
-                src: './src/images/list/list1.png',
-                listen: '1234'         
-            },
-            {
-                title: '标题2',
-                src: './src/images/list/list2.png',
-                listen: '666'         
-            },
-            {
-                title: '标题3',
-                src: './src/images/list/list3.png',
-                listen: '1234'         
-            },
-            {
-                title: '标题4',
-                src: './src/images/list/list4.png',
-                listen: '1'         
-            },
-            {
-                title: '标题5',
-                src: './src/images/list/list5.png',
-                listen: '35'         
-            }
-        ]
+        showMore: true,
+        showMoreUrl: '/discover/album/'
     },
     {
         key: 4,
         type: 3,
         name: '榜单',
-        cardList: [
-            {
-                title: '标题1',
-                src: './src/images/list/list1.png',
-                listen: '1234'         
-            },
-            {
-                title: '标题2',
-                src: './src/images/list/list2.png',
-                listen: '666'         
-            },
-            {
-                title: '标题3',
-                src: './src/images/list/list3.png',
-                listen: '1234'         
-            },
-            {
-                title: '标题4',
-                src: './src/images/list/list4.png',
-                listen: '1'         
-            },
-            {
-                title: '标题5',
-                src: './src/images/list/list5.png',
-                listen: '35'         
-            }
-        ]
+        showMore: true, 
+        showMoreUrl: '/discover/toplist/'
     }
 ]
 //自定义默认展开的模块
@@ -154,11 +104,11 @@ class PCCollapse extends React.Component{
                         panelModules.length?
                             panelModules.map((item) => {
                                 return (
-                                    <Panel header={item.name} key={item.key} >
+                                    <Panel style={{position: 'relative'}} header={item.name} key={item.key} >
                                         {
                                             item.showMore?
                                                 <a className="showMoreList a-style" href={item.showMoreUrl}>
-                                                    查看更多<Icon type="arrow-right"/>
+                                                    更多<Icon type="arrow-right"/>
                                                 </a>
                                             :''
                                         }                                       

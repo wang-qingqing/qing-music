@@ -23,11 +23,11 @@ class PCCollapseContent extends React.Component{
                 )                                  
         }else if(item.type == 2){
             return(
-                <PCAlbumList item={item} />
+                <PCAlbumList />
             ) 
         }else if(item.type == 3){
             return (
-                <PCTopList item={item} />
+                <PCTopList />
             )
         }else{
             return (

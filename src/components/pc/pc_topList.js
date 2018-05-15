@@ -11,7 +11,7 @@ const topList = [
              {
                  index: 1,
                  id: 11,
-                 name: '哑巴'
+                 name: '测试一下长度过长时能不能隐藏啊'
              },
              {
                  index: 2,
@@ -192,6 +192,17 @@ class PCTopList extends React.Component{
         message.info('添加到播放列表');
     }
 
+    //展示或隐藏操作按钮
+    controlOperateShowOrHide(type,index,itemIndex){
+        const key = index + "-" + itemIndex;
+        let currentDiv = document.querySelector("#topOperate"+key);
+        if(type == "show"){
+            currentDiv.style.display = "block"
+        }else{
+            currentDiv.style.display = "none"
+        }
+    }
+
     render(){
         return (
             <div className="top_container">
@@ -227,14 +238,19 @@ class PCTopList extends React.Component{
                                             dataSource={top.songList}
                                             renderItem={item => 
                                                 (
-                                                    <List.Item className="item-area" style={item.index%2==1?{background: itemBackgroundColor}:{}}>
+                                                    <List.Item 
+                                                        className="item-area" 
+                                                        style={item.index%2==1?{background: itemBackgroundColor}:{}} 
+                                                        onMouseOver={this.controlOperateShowOrHide.bind(this,'show',index,item.index)} 
+                                                        onMouseOut={this.controlOperateShowOrHide.bind(this,'hide',index,item.index)} >
+                                                        
                                                         <div className="item-index" style={item.index<4?{color:indexColor}:{}}>
                                                             {item.index}
                                                         </div>
-                                                        <div className="item-name"> 
-                                                            <a className="a-style" href="/song/id=`${item.id}`">{item.name}</a>
-                                                        </div>
-                                                        <div className="item-operate">
+                                                        <div className="item-name text-ellipsis"> 
+                                                            <a className="a-style" href={"/song?id=" + item.id} title={item.name}>{item.name}</a>
+                                                        </div> 
+                                                        <div className="item-operate" id={"topOperate"+ index +"-"+ item.index}>
                                                             <a className="a-style" onClick={this.play.bind(this)}>
                                                                 <Icon type="play-circle-o" title="播放" />
                                                             </a>
@@ -245,6 +261,7 @@ class PCTopList extends React.Component{
                                                                 <Icon type="folder-add" title="收藏" />
                                                             </a>
                                                         </div>
+                                                                                               
                                                     </List.Item>
                                                 )
                                             }
