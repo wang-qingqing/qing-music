@@ -25,6 +25,11 @@ $image-context: '../../images';
         width: 64px;
         margin-left: -70px;
     }
+    .menu-a-style{
+        &:hover{
+            text-decoration: none;
+        }
+    }
 }
 
 .topContent{

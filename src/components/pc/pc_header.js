@@ -20,12 +20,24 @@ class PCHeader extends React.Component{
                 <div className="main_area">
                     <div className="logo"></div>
                     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{lineHeight: '64px'}}>
-                        <Menu.Item key="1">发现音乐</Menu.Item>
-                        <Menu.Item key="2">我的音乐</Menu.Item>
-                        <Menu.Item key="3">朋友</Menu.Item>
-                        <Menu.Item key="4">商城</Menu.Item>
-                        <Menu.Item key="5">音乐人</Menu.Item>
-                        <Menu.Item key="6">下载客户端</Menu.Item>
+                        <Menu.Item key="1">
+                            <a className="menu-a-style" href="/">发现音乐</a>
+                        </Menu.Item>
+                        <Menu.Item key="2">
+                            <a className="menu-a-style" href="/my">我的音乐</a>                       
+                        </Menu.Item>
+                        <Menu.Item key="3">
+                            <a className="menu-a-style" href="/friend">朋友</a>
+                        </Menu.Item>
+                        <Menu.Item key="4">
+                            <a className="menu-a-style" href="/store">商城</a>                       
+                        </Menu.Item>
+                        <Menu.Item key="5">
+                            <a className="menu-a-style" href="/musician">音乐人</a>               
+                        </Menu.Item>
+                        <Menu.Item key="6">
+                            <a className="menu-a-style" href="/download">下载客户端</a>                        
+                        </Menu.Item>
                     </Menu>
                 </div>
             </Header>
