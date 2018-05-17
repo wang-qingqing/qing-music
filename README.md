@@ -23,12 +23,15 @@
 
 1、技术栈:
 
-    webpack4 + react + react-router + sass + antd 
+    webpack4 + react + react-router4 + sass + antd + mobx4 
 
 2、每个组件上的特有的样式要写在对应的css文件里，也只在对应的组件上引入，保证css按需加载。
 
 3、路由文件放在routes文件夹里面。
 
+4、辅助函数或者工具放在helper文件夹里面。
+
+5、状态管理的相关内容放在store文件夹里面。
 
 ### 四、总结
 1、webpack4的相关总结：
@@ -106,8 +109,9 @@
 
 5、关于react的性能优化:
 
-    请看这个：
-    > https://github.com/wang-qingqing/accumulate/blob/master/%E6%A1%86%E6%9E%B6%E7%B1%BB/REACT/%E3%80%90React%E3%80%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md 
+  请看这个：
+
+  >https://github.com/wang-qingqing/accumulate/blob/master/%E6%A1%86%E6%9E%B6%E7%B1%BB/REACT/%E3%80%90React%E3%80%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md 
   
 
 
