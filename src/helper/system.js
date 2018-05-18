@@ -3,7 +3,71 @@
  * 包括：日期时间转换、表单数据的校验等
  * let system = new System();
  */
+import {Base64} from 'js-base64';
+
 class System {
+    /**
+     * 读取多个cookie的时候使用，一次性读取，然后统一处理
+     */
+    getNewCookie(){
+        let cookies = [];
+        let vvv = document.cookie.split(";");
+        let a; 
+        vvv.forEach(function(e){
+            a = e.trim().split("=");
+            cookies[a[0]] = a[1];
+        })   
+        return cookies;
+    }
+
+    /**
+     * 只读取一个的时候使用
+     */   
+    getSingleCookie(name){
+        let vvv = document.cookie.split(";");
+        let a; 
+        for(let i=0;i<vvv.length;i++){   
+            a = vvv[i].trim().split("=");
+            if(a.length>1 && a[0]==name){  
+                return a[1];
+            }        
+        }   
+       return '';
+    }
+
+    /**
+     * json序列化对象+base64编码
+     * return 处理后的字符串
+     */
+    getRequestParams(object) {
+        var uid = this.getSingleCookie("userId");
+        var nickname = "";
+        if( this.getSingleCookie("userName")){
+            nickname = Base64.decode(this.getSingleCookie("userName"));
+        }
+        var token = localStorage.getItem("honeydukesSessionID");
+        var defaultData = {
+            uid : uid,
+            token : token,
+            nickname : nickname,
+            r : Math.random()
+        }
+        var params = "";
+        object = $.extend(true, {}, defaultData, object);
+        return Base64.encode(JSON.stringify(object));
+    }
+
+    /**
+     * 解析返回数据
+     */
+    parseResponseData(data) {
+        var respData = new Object();
+        if (data) {
+            respData = JSON.parse(Base64.decode(data));
+        }
+        return respData;
+    }
+
     /**
      * 日期时间格式化
      */

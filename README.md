@@ -23,15 +23,15 @@
 
 1、技术栈:
 
-    webpack4 + react + react-router4 + sass + antd + mobx4 
+    webpack4 + react + react-router4 + sass + antd + mobx4 + axios
 
 2、每个组件上的特有的样式要写在对应的css文件里，也只在对应的组件上引入，保证css按需加载。
 
-3、路由文件放在routes文件夹里面。
+3、路由文件放在**routes**文件夹里面。
 
-4、辅助函数或者工具放在helper文件夹里面。
+4、辅助函数或者工具放在**helper**文件夹里面。
 
-5、状态管理的相关内容放在store文件夹里面。
+5、状态管理的相关内容放在**store**文件夹里面。
 
 ### 四、总结
 1、webpack4的相关总结：
@@ -113,6 +113,36 @@
 
   >https://github.com/wang-qingqing/accumulate/blob/master/%E6%A1%86%E6%9E%B6%E7%B1%BB/REACT/%E3%80%90React%E3%80%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md 
   
+6、关于axios：
+  (1)参考文档：
+  >https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/
+
+  (2)基本用法：
+
+    //get请求
+      axios.get('/play',{
+          id: 123
+      })
+      .then((response) => {
+          console.log(response);
+      })
+      .catch((err) => {
+          console.log(err);
+      })
+
+
+    //post请求
+      axios({
+          method: 'post',
+          url: '/play',
+          data: {
+              id: 123
+          }
+      }).then((response) => {
+          console.log(response);
+      }).catch((err) => {
+          console.log(err);
+      })
 
 
  

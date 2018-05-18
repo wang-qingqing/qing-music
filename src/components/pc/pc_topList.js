@@ -1,7 +1,9 @@
 import React from 'react';
+import axios from 'axios';
 import {List,Icon,message} from 'antd';
 import '../../style/pc/topList.scss';
-
+import System from '../../helper/system';
+let system = new System();
 const topList = [
     {
         id: 1,
@@ -180,6 +182,35 @@ class PCTopList extends React.Component{
     //播放
     play(){
         message.info('播放');
+        let aa = system.getRequestParams({name:1})
+        console.log(aa)
+
+        /**
+         *  axios的基本用法
+            //get请求
+            axios.get('/play',{
+                id: 123
+            })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+            //post请求
+            axios({
+                method: 'post',
+                url: '/play',
+                data: {
+                    id: 123
+                }
+            }).then((response) => {
+                console.log(response);
+            }).catch((err) => {
+                console.log(err);
+            })
+        */
     }
 
     //收藏
