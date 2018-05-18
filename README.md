@@ -114,6 +114,7 @@
   >https://github.com/wang-qingqing/accumulate/blob/master/%E6%A1%86%E6%9E%B6%E7%B1%BB/REACT/%E3%80%90React%E3%80%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md 
   
 6、关于axios：
+
   (1)参考文档：
   >https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/
 
@@ -144,6 +145,15 @@
           console.log(err);
       })
 
+7、关于mockjs
+
+  (1)mockjs是可以用来模拟接口返回数据的。
+
+  (2)使用yarn add mockjs安装。
+
+  (3)参考文档：
+  
+  >https://segmentfault.com/q/1010000008427064
 
  
 

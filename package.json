@@ -32,6 +32,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "mobx": "^4.2.1",
     "mobx-react": "^5.1.2",
+    "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.4",
     "react": "^16.3.2",
