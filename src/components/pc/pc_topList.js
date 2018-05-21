@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import {List,Icon,message} from 'antd';
-import '../../style/pc/topList.scss';
-import '../../../mock/mockdata.js';
-import System from '../../helper/system';
+import 'Style/pc/topList.scss';
+import 'Mock/mockdata.js';
+import System from 'Helper/system';
 let system = new System();
 
 
@@ -185,8 +185,8 @@ class PCTopList extends React.Component{
     //播放
     play(){
         message.info('播放');
-        //let aa = system.getRequestParams({name:1})
-       // console.log("利用System运算:",aa);
+        let aa = system.getRequestParams()
+        console.log("利用System运算:",aa);
 
          //get请求
         axios.get('/data',{dataType: 'json'})

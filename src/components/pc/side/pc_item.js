@@ -2,7 +2,7 @@ import React from 'react';
 import {Card,Avatar} from 'antd';
 const { Meta } = Card;
 
-import '../../../style/pc/singerItem.scss';
+import 'Style/pc/singerItem.scss';
 
 class PCItem extends React.Component{
     constructor(){

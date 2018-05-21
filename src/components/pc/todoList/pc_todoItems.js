@@ -1,10 +1,10 @@
 import React from 'react';
-import PCHeader from '../pc_header';
-import TodoView from '../todoList/todoView';
+import PCHeader from 'Components/pc/pc_header';
+import TodoView from 'Components/pc/todoList/todoView';
 import {Layout} from 'antd';
-import Store from '../../../store/store';
+import Store from 'Store/store';
 
-import "../../../style/pc/index.scss";
+import "Style/pc/index.scss";
 
 const {Footer} = Layout;
 

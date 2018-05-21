@@ -5,7 +5,7 @@ import {
   Icon
 } from 'antd';
 const {Panel} = Collapse;
-import PCCollapseContent from './pc_collapseContent';
+import PCCollapseContent from 'Components/pc/pc_collapseContent';
 
 
 //自定义模块内容

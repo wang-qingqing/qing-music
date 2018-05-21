@@ -5,11 +5,11 @@ import {
     Switch
 } from 'react-router-dom';
 
-import ExtendRoute from './extendRoute';
-import NotFound from '../components/notFound';
-import PCMain from '../components/pc/pc_main';
-import PCTopList from "../components/pc/pc_topList";
-import PCTodoItems from '../components/pc/todoList/pc_todoItems';
+import ExtendRoute from 'Routes/extendRoute';
+import NotFound from 'Components/notFound';
+import PCMain from 'Components/pc/pc_main';
+import PCTopList from "Components/pc/pc_topList";
+import PCTodoItems from 'Components/pc/todoList/pc_todoItems';
 
 //路由配置
 const routes = [

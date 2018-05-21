@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon} from 'antd';
-import PCItem from './pc_item';
+import PCItem from 'Components/pc/side/pc_item';
 
 class PCPersonList extends React.Component{
     constructor(){

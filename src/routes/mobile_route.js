@@ -5,9 +5,9 @@ import {
     Switch
 } from 'react-router-dom';
 
-import ExtendRoute from './extendRoute';
-import NotFound from '../components/notFound';
-import MobileMain from '../components/mobile/mobile_main';
+import ExtendRoute from 'Routes/extendRoute';
+import NotFound from 'Components/notFound';
+import MobileMain from 'Components/mobile/mobile_main';
 
 //路由配置
 const routes = [

@@ -1,6 +1,6 @@
 import React from 'react';
-import PCUserCard from './pc_userCard';
-import PCPersonList from './pc_personList';
+import PCUserCard from 'Components/pc/side/pc_userCard';
+import PCPersonList from 'Components/pc/side/pc_personList';
 
 //定义入驻歌手
 const singerItem = [

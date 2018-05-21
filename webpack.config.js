@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const env = process.env.NODE_ENV;
+const path = require('path');  
 
 module.exports = {
     output: {
@@ -84,5 +85,15 @@ module.exports = {
         ignored: /node_modules/, // 忽略不用监听变更的目录
         aggregateTimeout: 500, // 防止重复保存频繁重新编译,500毫秒内重复保存不打包
         poll: 1000 // 每秒询问的文件变更的次数
+    },
+    resolve: {
+        alias: {
+            Mock: path.resolve(__dirname, 'mock'),
+            Components: path.resolve(__dirname, 'src/components'),
+            Helper: path.resolve(__dirname, 'src/helper'),
+            Routes: path.resolve(__dirname,'src/routes'),
+            Store: path.resolve(__dirname,'src/store'),
+            Style: path.resolve(__dirname, 'src/style')   
+        }
     }
 };

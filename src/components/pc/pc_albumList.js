@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon,message} from 'antd';
 
-import '../../style/pc/album.scss';
+import 'Style/pc/album.scss';
 
 const albumList = [
     {

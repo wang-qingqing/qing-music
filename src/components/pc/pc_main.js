@@ -1,9 +1,9 @@
 import React from 'react';
-import PCHeader from './pc_header';
-import PCContent from './pc_content';
+import PCHeader from 'Components/pc/pc_header';
+import PCContent from 'Components/pc/pc_content';
 import {Layout} from 'antd';
 
-import "../../style/pc/index.scss";
+import "Style/pc/index.scss";
 
 const {Footer} = Layout;
 

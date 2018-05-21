@@ -6,8 +6,8 @@ import {
    BackTop 
 } from 'antd';
 const {Header,Content,Footer,Sider} = Layout;
-import PCCollapse from './pc_collapse';
-import PCSide from './side/pc_side';
+import PCCollapse from 'Components/pc/pc_collapse';
+import PCSide from 'Components/pc/side/pc_side';
 
 //定义轮播图的图片地址
 const imageUrls = [

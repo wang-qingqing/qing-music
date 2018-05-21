@@ -10,9 +10,9 @@ import {
 
 import 'antd/dist/antd.css';
 
-import PCRoute from './routes/pc_route';
 import MediaQuery from 'react-responsive';
-import MobileRoute from './routes/mobile_route';
+import PCRoute from 'Routes/pc_route';
+import MobileRoute from 'Routes/mobile_route';
 
 export default class App extends React.Component{
   render(){

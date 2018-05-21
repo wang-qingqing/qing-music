@@ -1,4 +1,4 @@
-import todoStore from './todoStore';
+import todoStore from 'Store/todoStore';
 
 const Store = {
     todoStore //待办事情

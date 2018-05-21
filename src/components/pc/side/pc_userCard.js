@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Button,Tag} from 'antd';
 import { Link } from 'react-router-dom';
 
-import "../../../style/pc/userCard.scss";
+import "Style/pc/userCard.scss";
 
 class PCUserCard extends React.Component{
     constructor(props){

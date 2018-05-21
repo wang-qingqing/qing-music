@@ -1,7 +1,7 @@
 import React from 'react';
-import PCCard from './pc_card';
-import PCAlbumList from './pc_albumList';
-import PCTopList from './pc_topList';
+import PCCard from 'Components/pc/pc_card';
+import PCAlbumList from 'Components/pc/pc_albumList';
+import PCTopList from 'Components/pc/pc_topList';
 
 class PCCollapseContent extends React.Component{
     constructor(){
