@@ -46,15 +46,14 @@ class System {
             nickname = Base64.decode(this.getSingleCookie("userName"));
         }
         var token = localStorage.getItem("honeydukesSessionID");
-        var defaultData = {
-            uid : uid,
-            token : token,
-            nickname : nickname,
-            r : Math.random()
-        }
-        var params = "";
-        object = $.extend(true, {}, defaultData, object);
-        return Base64.encode(JSON.stringify(object));
+
+        var newObject = object || {};
+        newObject.uid = uid;
+        newObject.token = token;
+        newObject.nickname = nickname;
+        newObject.r = Math.random();
+
+        return Base64.encode(JSON.stringify(newObject));
     }
 
     /**
