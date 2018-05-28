@@ -47,11 +47,12 @@ class System {
         }
         var token = localStorage.getItem("honeydukesSessionID");
 
-        var newObject = object || {};
-        newObject.uid = uid;
-        newObject.token = token;
-        newObject.nickname = nickname;
-        newObject.r = Math.random();
+        var newObject = Object.assign({}, object, {
+            uid: uid,
+            token: token,
+            nickname: nickname,
+            r: Math.random()
+        })
 
         return Base64.encode(JSON.stringify(newObject));
     }
