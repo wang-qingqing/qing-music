@@ -1,12 +1,15 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const env = process.env.NODE_ENV;
 const path = require('path');  
 
 module.exports = {
     output: {
-        publicPath: '/' //表示资源的发布地址，当配置过该属性后，打包文件中所有通过相对路径引用的资源都会被配置的路径所替换。
+        publicPath: '/', //表示资源的发布地址，当配置过该属性后，打包文件中所有通过相对路径引用的资源都会被配置的路径所替换。
+        filename:'[name]-[hash].js'
     },
+    devtool: env === 'production' ? false : 'cheap-module-eval-source-map',
     devServer:{
         //port: 666, //自定义端口号，默认是8080
         historyApiFallback: true,  //可以查看页面的报错信息,并且所有路径都会执行index.html
@@ -70,15 +73,16 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(['dist']), //在打包前清空 dist 目录
         new HtmlWebPackPlugin({
-        template: "./src/index.html",
-        filename: "./index.html", // 生成的html存放路径，相对于 path
-        hash: true // 为静态资源生成hash值
+            template: "./src/index.html",
+            filename: "./index.html", // 生成的html存放路径，相对于 path
+            hash: true // 为静态资源生成hash值
         }),
         new MiniCssExtractPlugin({
-        filename: "[name].css",
-        chunkFilename: "[id].css"
-        })
+            filename: "[name].[chunkhash:8].css",
+            chunkFilename: "[id].css"
+        })     
     ],
     watch: env === 'development',
     watchOptions: {
