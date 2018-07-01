@@ -10,6 +10,7 @@ import NotFound from 'Components/notFound';
 import PCMain from 'Components/pc/pc_main';
 import PCTopList from "Components/pc/pc_topList";
 import PCTodoItems from 'Components/pc/todoList/pc_todoItems';
+import CustomDelete from 'Components/pc/deleteFunction/customDelete';
 
 //路由配置
 const routes = [
@@ -36,7 +37,13 @@ const routes = [
         path: '/todo',
         exact: true,
         component: PCTodoItems
-    }
+    },
+    //代办事项
+    {
+        path: '/del',
+        exact: true,
+        component: CustomDelete
+    },
 ];
 
 //TODO  

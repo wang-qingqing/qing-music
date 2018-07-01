@@ -8,7 +8,7 @@ import "Style/pc/index.scss";
 
 const {Footer} = Layout;
 
-const todoStore = new Store.todoStore();
+const todoStore = Store.todoStore;
 export default class PCTodoItems extends  React.Component{
     render(){
         return (          
