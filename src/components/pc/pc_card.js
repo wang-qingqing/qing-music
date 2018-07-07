@@ -31,7 +31,7 @@ class PCCard extends React.Component{
                         <Icon type="sound" />
                         <span style={{paddingLeft: '5px'}}>{this.props.cardListen}</span>
                     </div>,
-                    <Icon type="play-circle-o" onClick={this.play.bind(this)} />
+                    <Icon type="play-circle-o" onClick={this.play} />
                 ]} >
 
                 <a title={this.props.cardTitle} className="a-style">

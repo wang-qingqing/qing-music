@@ -14,7 +14,7 @@ class TodoView extends React.Component{
     }
 
     //添加待办事项
-    addTodoItem(e){  
+    addTodoItem(){  
         let addInput = document.querySelector("#addTodo");
         if(addInput.value != ''){
             this.props.todoStore.addTodo(addInput.value);
@@ -38,7 +38,7 @@ class TodoView extends React.Component{
                                 todoStore.todos.map((todo,index) => {
                                 return(
                                     <li key={index}>
-                                        <Checkbox checked={todo.finished}  onClick={() => todo.finished = !todo.finished} onChange={this.changeItems.bind(this)}>
+                                        <Checkbox checked={todo.finished}  onClick={() => todo.finished = !todo.finished} onChange={this.changeItems}>
                                             {todo.task}
                                         </Checkbox>
                                     </li>
@@ -50,7 +50,7 @@ class TodoView extends React.Component{
                 }  
                <div>
                     <Input id="addTodo" placeholder="请添加待办事项" style={{width: '300px',marginRight: '20px'}}/>
-                    <Button type="primary" onClick={this.addTodoItem.bind(this)}>添加</Button>
+                    <Button type="primary" onClick={this.addTodoItem}>添加</Button>
                 </div> 
             </div>
         )

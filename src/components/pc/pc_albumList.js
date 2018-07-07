@@ -93,7 +93,7 @@ class PCAlbumList extends React.Component{
     render(){
         return (
             <div className="albumContainer">
-                <a className="pre a-style"><Icon type="double-left" onClick={this.pre.bind(this)} /></a>
+                <a className="pre a-style"><Icon type="double-left" onClick={this.pre} /></a>
                 <div className="roll">
                     <ul>
 
@@ -107,7 +107,7 @@ class PCAlbumList extends React.Component{
                                                 <a title={album.name} href={albumUrl} className="msk a-style">
                                                     <img className="cover-img" src={album.coverSrc}/>  
                                                 </a>
-                                                <a title="播放" className="play a-style" onClick={this.play.bind(this)}>
+                                                <a title="播放" className="play a-style" onClick={this.play}>
                                                     <Icon type="play-circle" className="playIcon"/>
                                                 </a>
                                             </div>
@@ -140,7 +140,7 @@ class PCAlbumList extends React.Component{
                         
                     </ul>
                 </div>
-                <a className="next a-style"><Icon type="double-right" onClick={this.next.bind(this)} /></a>
+                <a className="next a-style"><Icon type="double-right" onClick={this.next} /></a>
             </div>
         )
     }

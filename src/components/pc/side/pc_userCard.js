@@ -47,7 +47,7 @@ class PCUserCard extends React.Component{
                         <div id="signInBtn">
                             {
                                 !this.state.signIn?
-                                <Button type="primary" style={{width: '80px'}} onClick={this.signIn.bind(this)}>签到</Button>
+                                <Button type="primary" style={{width: '80px'}} onClick={this.signIn}>签到</Button>
                                 :<Button disabled="disabled" style={{width: '80px'}}>已签到</Button>
                             }             
                         </div>
