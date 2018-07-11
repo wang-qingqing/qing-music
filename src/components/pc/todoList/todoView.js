@@ -14,7 +14,7 @@ class TodoView extends React.Component{
     }
 
     //添加待办事项
-    addTodoItem(){  
+    addTodoItem = () => {  
         let addInput = document.querySelector("#addTodo");
         if(addInput.value != ''){
             this.props.todoStore.addTodo(addInput.value);
