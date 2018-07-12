@@ -11,6 +11,7 @@ import PCMain from 'Components/pc/pc_main';
 import PCTopList from "Components/pc/pc_topList";
 import PCTodoItems from 'Components/pc/todoList/pc_todoItems';
 import CustomDelete from 'Components/pc/deleteFunction/customDelete';
+import PCUserHome from "Components/pc/user/home";
 
 //路由配置
 const routes = [
@@ -28,9 +29,9 @@ const routes = [
     },
     //用户主页
     {
-        path: '/user/home',
+        path: '/user',
         exact: true,
-        component: PCTopList
+        component: PCUserHome
     },
     //代办事项
     {
@@ -38,7 +39,7 @@ const routes = [
         exact: true,
         component: PCTodoItems
     },
-    //代办事项
+    //删除功能
     {
         path: '/del',
         exact: true,
