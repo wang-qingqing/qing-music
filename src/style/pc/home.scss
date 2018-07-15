@@ -1,0 +1,37 @@
+.content{
+    position: relative;
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .head{
+        width: 180px;
+        height: 180px;
+    }
+
+    .userInfo{
+        margin: 30px auto;
+    }
+
+    .home-userInfo{
+        margin-left: 260px;
+        margin-right: 20px;
+        border-bottom: none;
+        padding-top: 0px;
+    }
+
+    .home-name{
+       border-bottom:1px solid #ccc;
+       font-size: 18px;
+       padding-bottom: 10px;
+    }
+
+    .home-desc{
+        margin-top: 15px;
+    }
+}
+
+.txt-l{
+    text-align: left;
+}

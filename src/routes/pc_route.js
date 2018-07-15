@@ -29,7 +29,7 @@ const routes = [
     },
     //用户主页
     {
-        path: '/user',
+        path: '/user/home',
         exact: true,
         component: PCUserHome
     },

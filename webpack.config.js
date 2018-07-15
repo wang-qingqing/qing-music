@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = {
     output: {
-        //publicPath: '/', //表示资源的发布地址，当配置过该属性后，打包文件中所有通过相对路径引用的资源都会被配置的路径所替换。
+        publicPath: '/', //表示资源的发布地址，当配置过该属性后，打包文件中所有通过相对路径引用的资源都会被配置的路径所替换。
         filename:'[name]-[hash].js'
     },
     devtool: env === 'production' ? false : 'cheap-module-eval-source-map',
