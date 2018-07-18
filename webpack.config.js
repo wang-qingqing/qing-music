@@ -2,12 +2,11 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const env = process.env.NODE_ENV;
-const path = require('path');  
+const path = require('path');
 
 module.exports = {
     output: {
-        publicPath: '/', //表示资源的发布地址，当配置过该属性后，打包文件中所有通过相对路径引用的资源都会被配置的路径所替换。
-        filename:'[name]-[hash].js'
+        filename: '[name]-[hash].js'
     },
     devtool: env === 'production' ? false : 'cheap-module-eval-source-map',
     devServer:{
@@ -18,22 +17,21 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options:{
                         presets: [
-                            'react',
+                            "react",
                             ["env", {
                                 "targets": {
                                     "browsers": ["last 2 versions", "safari >= 7", "iOS >= 8"]
-                                }
+                                }                        
                             }],
-                            'stage-1'                  
+                            'stage-1'                
                         ],
                         "plugins": [
-                            "transform-runtime",
                             "transform-decorators-legacy",
                             "transform-decorators"                
                         ]
@@ -81,8 +79,8 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: "[name].[chunkhash:8].css",
-            chunkFilename: "[id].css"
-        })     
+            chunkFilename: "[id].[chunkhash:8].css"
+        })
     ],
     watch: env === 'development',
     watchOptions: {

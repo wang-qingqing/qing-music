@@ -1,17 +1,59 @@
 import React from 'react';
 import {
-    BrowserRouter,
+    HashRouter,
     Route,
     Switch
 } from 'react-router-dom';
-
+import Loadable from "react-loadable";
 import ExtendRoute from 'Routes/extendRoute';
 import NotFound from 'Components/notFound';
-import PCMain from 'Components/pc/pc_main';
-import PCTopList from "Components/pc/pc_topList";
-import PCTodoItems from 'Components/pc/todoList/pc_todoItems';
-import CustomDelete from 'Components/pc/deleteFunction/customDelete';
-import PCUserHome from "Components/pc/user/home";
+
+//定义加载中的展示效果
+const MyLoadingComponent = ({ isLoading, error }) => {
+    // Handle the loading state
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+    // Handle the error state
+    else if (error) {
+        return <div>Sorry, there was a problem loading the page.</div>;
+    } else {
+        return null;
+    }
+}
+
+//菜单上的组件
+//首页
+const PCMain = Loadable({
+    loader: () => import("Components/pc/pc_main"),
+    loading: MyLoadingComponent
+});
+ 
+//列表
+const PCTopList = Loadable({
+    loader: () => import("Components/pc/pc_topList"),
+    loading: MyLoadingComponent
+});
+
+//用户主页
+const PCUserHome = Loadable({
+    loader: () => import("Components/pc/user/home"),
+    loading: MyLoadingComponent
+});
+
+//代办事项
+const PCTodoItems = Loadable({
+    loader: () => import("Components/pc/todoList/pc_todoItems"),
+    loading: MyLoadingComponent
+});
+
+//删除功能
+const CustomDelete = Loadable({
+    loader: () => import("Components/pc/deleteFunction/customDelete"),
+    loading: MyLoadingComponent
+});
+
+
 
 //路由配置
 const routes = [
@@ -54,7 +96,7 @@ class PCRoute extends React.Component{
     render(){
         return (
             routes.length?
-                <BrowserRouter>
+                <HashRouter>
                     <Switch>
                         {routes.map((route, i) => (
                             <ExtendRoute key={i} {...route} />
@@ -62,7 +104,7 @@ class PCRoute extends React.Component{
 
                         <Route component={NotFound} />
                     </Switch>
-                </BrowserRouter>
+                </HashRouter>
             : ''
         )
     }
