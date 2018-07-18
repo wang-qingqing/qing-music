@@ -34,12 +34,12 @@ class PCUserCard extends React.Component{
         return (
             <div className="userCard_area">
                 <div className="userCard_top">
-                    <a href="/user/home"> 
+                    <a href="./#/user/home"> 
                         <img className="head" src={userInfo.headSrc}/>
                     </a>
                     <div className="info">
                         <strong>
-                            <a className="a-style name" href={`/user/home?id=${userInfo.userId}`}>{userInfo.name}</a>               
+                            <a className="a-style name" href={`./#/user/home?id=${userInfo.userId}`}>{userInfo.name}</a>               
                         </strong>
                         <Tag style={{margin: '10px auto'}}>
                             <a href="/user/level">Lv.{userInfo.level}</a>
