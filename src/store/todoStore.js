@@ -1,6 +1,6 @@
 import {observable,computed} from 'mobx';
 
-class TodoStore {
+export default class TodoStore {
     @observable todos = [];
 
     //计算没完成的待办事项的数量
@@ -17,5 +17,3 @@ class TodoStore {
     }
 
 }
-
-export default TodoStore;

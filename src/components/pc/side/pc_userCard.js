@@ -2,35 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Button,Tag} from 'antd';
 import { Link } from 'react-router-dom';
-
+import {observer} from 'mobx-react';
+import Store from 'Store/store';
 import "Style/pc/userCard.scss";
+const userCardStore = Store.userCardStore;
 
+@observer
 class PCUserCard extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            userInfo: { //用户的相关信息
-                userId: 123,//用户id
-                name:'小猫咪喵喵喵',//用户名
-                headSrc: './src/images/user/user1.png',//头像
-                level: 8, //等级
-                eventCount: 10, //动态
-                followCount: 100, //关注
-                fansCount: 66 //粉丝
-            },
-            signIn: false //是否签到
-        }
     };
 
     //签到
     signIn(){
-        this.setState({
-            signIn: !this.state.signIn
-        })  
+        userCardStore.updateSignIn(); 
     }
 
     render(){
-        let userInfo = this.state.userInfo;
+        let userInfo = userCardStore.userInfo;
         return (
             <div className="userCard_area">
                 <div className="userCard_top">
@@ -46,7 +35,7 @@ class PCUserCard extends React.Component{
                         </Tag>
                         <div id="signInBtn">
                             {
-                                !this.state.signIn?
+                                !userCardStore.signIn?
                                 <Button type="primary" style={{width: '80px'}} onClick={this.signIn}>签到</Button>
                                 :<Button disabled="disabled" style={{width: '80px'}}>已签到</Button>
                             }             
