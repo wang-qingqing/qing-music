@@ -1,6 +1,5 @@
 .content{
     position: relative;
-    text-align: center;
     width: 1000px;
     margin: 0 auto;
     overflow: hidden;
@@ -8,10 +7,12 @@
     .head{
         width: 180px;
         height: 180px;
+        border: 1px solid #dadada;
     }
 
     .userInfo{
         margin: 30px auto;
+        text-align: center;
     }
 
     .home-userInfo{

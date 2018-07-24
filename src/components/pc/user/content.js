@@ -5,7 +5,7 @@ import "Style/pc/userCard.scss";
 
 const userInfo = { //用户的相关信息
     userId: 123,//用户id
-    name:'小猫咪喵喵喵',//用户名
+    name:'Lucky',//用户名
     headSrc: '../src/images/user/user1.png',//头像
     level: 8, //等级
     eventCount: 10, //动态
@@ -24,7 +24,7 @@ export default class PCUserHomeContent extends React.Component{
 
                     <div className="userCard_area home-userInfo">
                         <div className="txt-l home-name">
-                            <strong>小猫咪喵喵喵</strong>
+                            <strong>{userInfo.name}</strong>
                         </div>
                         <div className="userCard_bottom">            
                             <ul>

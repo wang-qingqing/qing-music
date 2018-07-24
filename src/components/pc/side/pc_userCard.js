@@ -27,9 +27,11 @@ class PCUserCard extends React.Component{
                         <img className="head" src={userInfo.headSrc}/>
                     </a>
                     <div className="info">
-                        <strong>
-                            <a className="a-style name" href={`./#/user/home?id=${userInfo.userId}`}>{userInfo.name}</a>               
-                        </strong>
+                        <div>
+                            <strong>
+                                <a className="a-style name" href={`./#/user/home?id=${userInfo.userId}`}>{userInfo.name}</a>               
+                            </strong>
+                        </div>
                         <Tag style={{margin: '10px auto'}}>
                             <a href="/user/level">Lv.{userInfo.level}</a>
                         </Tag>

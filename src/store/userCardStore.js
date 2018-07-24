@@ -3,7 +3,7 @@ import {observable} from 'mobx';
 export default class UserCardStore {
     @observable userInfo = { //用户的相关信息
         userId: 123,//用户id
-        name:'小猫咪喵喵喵',//用户名
+        name:'Lucky',//用户名
         headSrc: './src/images/user/user1.png',//头像
         level: 8, //等级
         eventCount: 10, //动态

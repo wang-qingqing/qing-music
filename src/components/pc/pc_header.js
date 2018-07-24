@@ -7,7 +7,7 @@ import {
    Icon
 } from 'antd';
 const {Header,Content,Footer,Sider} = Layout;
-
+import "Style/pc/index.scss";
 
 class PCHeader extends React.Component{
     constructor(){
