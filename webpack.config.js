@@ -10,7 +10,7 @@ module.exports = {
     },
     devtool: env === 'production' ? false : 'cheap-module-eval-source-map',
     devServer:{
-        //port: 666, //自定义端口号，默认是8080
+        port: 1119, //自定义端口号，默认是8080
         historyApiFallback: true,  //可以查看页面的报错信息,并且所有路径都会执行index.html
         compress: true // 开发服务器是否启动gzip等压缩
     },
