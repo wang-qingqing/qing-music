@@ -1,5 +1,7 @@
 import React from 'react';
 import SongRank from 'Components/pc/song/rank';
+import SongSheetCreate from 'Components/pc/song/sheetCreate';
+
 import "Style/pc/home.scss";
 import "Style/pc/userCard.scss";
 
@@ -58,7 +60,8 @@ export default class PCUserHomeContent extends React.Component{
                 </div>
 
                 <SongRank />
-                {/* songSheetCreate */}
+
+                <SongSheetCreate />
               
                 {/* songSheetCollect */}
                
