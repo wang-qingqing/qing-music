@@ -18,8 +18,8 @@ const imageUrls = [
 class PCContent extends React.Component{
     render(){
         return (
-            <Content>
-                <div className="topContent">
+            <Content className="content">
+                <div>
                     <Carousel className="carousel" autoplay>
                         {
                             imageUrls.length?

@@ -14,9 +14,8 @@ $image-context: '../../images';
 .main_area{
     position: relative;
     width: 1000px;
-    min-height: 1200px;
+    height: 64px;
     margin: 0 auto;
-    background-color: #fff;
 
     .logo{
         position: absolute;
@@ -31,15 +30,14 @@ $image-context: '../../images';
         }
     }
 }
-
-.topContent{
+.content{
     position: relative;
-    text-align: center;
     width: 1000px;
-    height: 300px;
     margin: 0 auto;
-    overflow: hidden;
+    background-color: #fff; 
+    min-height: 1400px;
 }
+
 .carousel img{
     width: 1000px;
     height: 300px;
