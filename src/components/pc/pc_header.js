@@ -10,16 +10,17 @@ const {Header,Content,Footer,Sider} = Layout;
 import "Style/pc/index.scss";
 
 class PCHeader extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
     render(){
+        let defaultSelectedKeys = [this.props.activeKey];
         return (
             <Header className="header">
                 <div className="main_area">
                     <div className="logo"></div>
-                    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{lineHeight: '64px'}}>
+                    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={defaultSelectedKeys} style={{lineHeight: '64px'}}>
                         <Menu.Item key="1">
                             <a className="menu-a-style" href="/">发现音乐</a>
                         </Menu.Item>

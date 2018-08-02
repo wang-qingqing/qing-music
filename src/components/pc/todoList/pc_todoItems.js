@@ -1,5 +1,4 @@
 import React from 'react';
-import PCHeader from 'Components/pc/pc_header';
 import TodoView from 'Components/pc/todoList/todoView';
 import {Layout} from 'antd';
 import Store from 'Store/store';

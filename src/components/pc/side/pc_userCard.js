@@ -33,7 +33,7 @@ class PCUserCard extends React.Component{
                             </strong>
                         </div>
                         <Tag style={{margin: '10px auto'}}>
-                            <a href="/user/level">Lv.{userInfo.level}</a>
+                            <a href="./#/user/level">Lv.{userInfo.level}</a>
                         </Tag>
                         <div id="signInBtn">
                             {

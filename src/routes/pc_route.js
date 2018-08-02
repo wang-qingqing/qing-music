@@ -41,6 +41,12 @@ const PCUserHome = Loadable({
     loading: MyLoadingComponent
 });
 
+//用户等级
+const PCUserLevel = Loadable({
+    loader: () => import("Components/pc/user/level"),
+    loading: MyLoadingComponent
+});
+
 //代办事项
 const PCTodoItems = Loadable({
     loader: () => import("Components/pc/todoList/pc_todoItems"),
@@ -74,6 +80,12 @@ const routes = [
         path: '/user/home',
         exact: true,
         component: PCUserHome
+    },
+    //用户等级
+    {
+        path: '/user/level',
+        extra: true,
+        component: PCUserLevel
     },
     //代办事项
     {

@@ -1,0 +1,13 @@
+.user-level-content{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff; 
+    overflow: hidden;
+
+    .level-seperator{
+        margin: 10px auto;
+        border-bottom: solid 1px #ddd;
+    }
+}

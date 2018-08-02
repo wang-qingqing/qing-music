@@ -58,7 +58,7 @@ export default class PCUserHomeContent extends React.Component{
                         <div className="txt-l home-name">
                             <strong>{userInfo.name}</strong>
                             <Tag style={{marginLeft: '10px'}}>
-                                <a href="/user/level">Lv.{userInfo.level}</a>
+                                <a href="./#/user/level">Lv.{userInfo.level}</a>
                             </Tag>
                             {
                                 userInfo.sex == 2 ?
