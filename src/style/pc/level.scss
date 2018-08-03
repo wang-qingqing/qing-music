@@ -2,12 +2,25 @@
     position: relative;
     width: 1000px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 60px;
     background-color: #fff; 
     overflow: hidden;
 
     .level-seperator{
         margin: 10px auto;
         border-bottom: solid 1px #ddd;
+    }
+
+    .text-strong{
+        color: #40a9ff;
+        font-weight: bold; 
+    }
+
+    .text-seperator{
+        padding: 0 10px;
+    }
+
+    .text-margin{
+        margin: 30px 0;
     }
 }
