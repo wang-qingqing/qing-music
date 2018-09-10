@@ -120,8 +120,28 @@ export default class PCUserHome extends React.Component{
                                     距离下一个等级
                                     <span className="text-seperator">:</span>
                                     <span className="text-strong">Lv.{level+1}</span>
-                                    <Icon type="info-circle-o" />
+                                    <Icon type="info-circle-o" className="text-pl-5px" />
                                 </h3>
+
+                                <div>
+                                    听歌：
+                                    <div className="bar">
+                                        <div className="barbox">
+                                            {/* <span style="width:38.02%;"></span> */}
+                                        </div>
+                                    </div>
+                                    还需听歌666首 
+                                </div>
+
+                                <div>
+                                    登录：
+                                    <div className="bar">
+                                        <div className="barbox">
+                                            {/* <span style="width:100%;"></span> */}
+                                        </div>
+                                    </div>
+                                    还需登录0天
+                                </div>
                             </div>
                         :''
                     }        

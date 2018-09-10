@@ -10,13 +10,13 @@ Mock.mock('/data',{
 
 /**
  * TODO
- * 1.改成hash路由
+ * 1.改成hash路由 (Completed)
  * 
  * 2.搭建一个nodejs的服务端
  * 
  * 3.页面：
  * （1）/user/home?id=     个人主页    20180730完成
- * （2）/user/level  等级
+ * （2）/user/level  等级   
  * （3）/discover/artist/signed  入驻歌手
  * （4）/user/event  动态
  * （5）/user/follows  关注

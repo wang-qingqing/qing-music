@@ -23,4 +23,30 @@
     .text-margin{
         margin: 30px 0;
     }
+
+    .text-pl-5px{
+        padding-left: 5px;
+    }
+
+    .bar{
+        display: inline-block;
+        width: 160px;
+        height: 12px;
+        margin-right: 6px;
+        position: relative;
+        zoom: 1;
+    }
+
+    .barbox {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        z-index: 1;
+        width: 160px;
+        height: 4px;
+        line-height: 0;
+        background: #dcdfe6;
+        border-radius: 4px;
+    }
+    
 }
