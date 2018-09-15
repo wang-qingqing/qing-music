@@ -120,24 +120,30 @@ export default class PCUserHome extends React.Component{
                                     距离下一个等级
                                     <span className="text-seperator">:</span>
                                     <span className="text-strong">Lv.{level+1}</span>
-                                    <Icon type="info-circle-o" className="text-pl-5px" />
+                                    <span className="n-iconpoint">
+                                        <Icon type="info-circle-o" />
+                                        <div className="tip">
+                                            <p>听歌量是指累计播放的歌曲数量而非播放次数，并且实际播放时间过短的歌曲将不纳入计算，每天最多计算300首。</p>
+                                            <p>登录天数是指使用云音乐的天数，在多端同时使用不会被重复计算。</p>
+                                        </div>
+                                    </span>                                  
                                 </h3>
 
                                 <div>
                                     听歌：
                                     <div className="bar">
                                         <div className="barbox">
-                                            {/* <span style="width:38.02%;"></span> */}
+                                            <span style={{width: '38.02%'}}></span>
                                         </div>
                                     </div>
                                     还需听歌666首 
                                 </div>
 
-                                <div>
+                                <div style={{marginTop: '25px'}}>
                                     登录：
                                     <div className="bar">
                                         <div className="barbox">
-                                            {/* <span style="width:100%;"></span> */}
+                                            <span style={{width: '100%'}}></span>
                                         </div>
                                     </div>
                                     还需登录0天

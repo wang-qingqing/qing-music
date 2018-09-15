@@ -15,8 +15,8 @@ Mock.mock('/data',{
  * 2.搭建一个nodejs的服务端
  * 
  * 3.页面：
- * （1）/user/home?id=     个人主页    20180730完成
- * （2）/user/level  等级   
+ * （1）/user/home?id=     个人主页    (20180730Completed)
+ * （2）/user/level  等级   (20180915Completed)
  * （3）/discover/artist/signed  入驻歌手
  * （4）/user/event  动态
  * （5）/user/follows  关注
