@@ -59,6 +59,29 @@ const CustomDelete = Loadable({
     loading: MyLoadingComponent
 });
 
+//入驻歌手 
+const DiscoverArtist = Loadable({
+    loader: () => import("Components/pc/discover/artist"),
+    loading: MyLoadingComponent
+});
+
+//热门推荐
+const DiscoverPlaylist = Loadable({
+    loader: () => import("Components/pc/discover/playlist"),
+    loading: MyLoadingComponent
+});
+
+//新碟上架 
+const DiscoverAlbum = Loadable({
+    loader: () => import("Components/pc/discover/album"),
+    loading: MyLoadingComponent
+});
+
+//榜单
+const DiscoverToplist = Loadable({
+    loader: () => import("Components/pc/discover/toplist"),
+    loading: MyLoadingComponent
+});
 
 
 //路由配置
@@ -98,6 +121,30 @@ const routes = [
         path: '/del',
         exact: true,
         component: CustomDelete
+    },
+    //入驻歌手  
+    {
+        path: '/discover/artist',
+        exact: true,
+        component: DiscoverArtist
+    },
+    //热门推荐 
+    {
+        path: '/discover/playlist',
+        exact: true,
+        component: DiscoverPlaylist
+    },
+    //新碟上架 
+    {
+        path: '/discover/album',
+        exact: true,
+        component: DiscoverAlbum
+    },
+    //榜单 
+    {
+        path: '/discover/toplist',
+        exact: true,
+        component: DiscoverToplist
     },
 ];
 

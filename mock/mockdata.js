@@ -17,7 +17,7 @@ Mock.mock('/data',{
  * 3.页面：
  * （1）/user/home?id=     个人主页    (20180730Completed)
  * （2）/user/level  等级   (20180915Completed)
- * （3）/discover/artist/signed  入驻歌手
+ * （3）/discover/artist  入驻歌手
  * （4）/user/event  动态
  * （5）/user/follows  关注
  * （6）/user/fans   粉丝

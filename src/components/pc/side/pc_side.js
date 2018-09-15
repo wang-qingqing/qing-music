@@ -75,7 +75,7 @@ class PCSide extends React.Component{
         return (
             <div className="side-content">
                 <PCUserCard />
-                <PCPersonList title="入驻歌手" showMoreUrl="/discover/artist/signed" itemList={singerItem} />
+                <PCPersonList title="入驻歌手" showMoreUrl="/#/discover/artist" itemList={singerItem} />
                 <PCPersonList title="热门主播" itemList={djItem} />
             </div>
         )
