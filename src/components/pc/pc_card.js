@@ -1,8 +1,6 @@
 import React from 'react';
 import {Card,Avatar,Icon,message} from 'antd';
 
-const {Meta} = Card;
-
 const cardStyle = {
     width: 160,
     display: 'inline-block',

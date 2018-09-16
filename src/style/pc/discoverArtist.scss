@@ -1,0 +1,96 @@
+.discover-artist-content{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fff; 
+    overflow: hidden;
+
+    .left-content{
+        position: relative;
+        float: left;
+        width: 198px;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+
+        .n-sgernav {
+            margin-top: 51px;
+            padding: 0 18px 40px;
+
+            .tit {
+                height: 25px;
+                padding-left: 14px;
+                font-size: 16px;
+                font-weight: bolder;
+                font-family: "Microsoft Yahei";
+            }
+
+            .blk {
+                margin: 5px 0 0;
+                padding-top: 16px;
+                border-top: 1px solid #d3d3d3;
+            }
+
+            ul{
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                margin-bottom: 2px;       
+            }
+
+            li,li a {
+                float: left;
+                width: 160px;
+                height: 29px;
+                line-height: 29px;
+            }
+
+            li, s {
+                list-style: none;
+            }
+
+            li a {
+                padding-left: 27px;
+                background-position: 0 -30px;
+                color: #333;
+                font-size: 12px;  
+                background: url('../../../src/images/discover/singer.png') no-repeat;            
+
+                &:hover {
+                    text-decoration: underline;
+                    color: #333;
+                }
+
+                &.active{
+                    background: url('../../../src/images/discover/singer-active.png') no-repeat;  
+                }
+            }
+
+            .f-cb:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                visibility: hidden;
+            }
+            
+            .f-cb {
+                *zoom:1;
+            }
+            
+        }
+        
+    }
+
+    .right-content{
+        position: absolute;
+        top: 0;
+        left: 197px;
+        width: 802px;
+
+        .card-name-text{
+            height: 25px;
+        }
+    }
+}

@@ -21,7 +21,7 @@ export default class PCUserHome extends React.Component{
                 <Footer style={{textAlign:'center'}}>
                     Qing Music&copy;2018
                 </Footer>
-        </Layout>         
+            </Layout>         
         )
     }
 }
