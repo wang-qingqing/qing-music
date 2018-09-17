@@ -47,19 +47,19 @@ class PCUserCard extends React.Component{
                 <div className="userCard_bottom">
                     <ul>
                         <li className="first">
-                            <a href="/user/event">
+                            <a href="/#/user/event">
                                 <strong>{userInfo.eventCount}</strong>
                                 <div>动态</div>
                             </a>
                         </li>
                         <li>
-                            <a href="/user/follows">
+                            <a href="/#/user/follows">
                                 <strong>{userInfo.followCount}</strong>
                                 <div>关注</div>
                             </a>
                         </li>
                         <li className="last">
-                            <a href="/user/fans">
+                            <a href="/#/user/fans">
                                 <strong>{userInfo.fansCount}</strong>
                                 <div>粉丝</div>
                             </a>

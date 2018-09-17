@@ -47,6 +47,12 @@ const PCUserLevel = Loadable({
     loading: MyLoadingComponent
 });
 
+//用户动态
+const PCUserEvent = Loadable({
+    loader: () => import("Components/pc/user/event"),
+    loading: MyLoadingComponent
+});
+
 //代办事项
 const PCTodoItems = Loadable({
     loader: () => import("Components/pc/todoList/pc_todoItems"),
@@ -109,6 +115,12 @@ const routes = [
         path: '/user/level',
         extra: true,
         component: PCUserLevel
+    },
+    //动态 
+    {
+        path: '/user/event',
+        exact: true,
+        component: PCUserEvent
     },
     //代办事项
     {
