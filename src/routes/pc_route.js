@@ -52,7 +52,16 @@ const PCUserEvent = Loadable({
     loader: () => import("Components/pc/user/event"),
     loading: MyLoadingComponent
 });
-
+//关注
+const PCUserFollows = Loadable({
+    loader: () => import("Components/pc/user/follows"),
+    loading: MyLoadingComponent
+});
+//粉丝
+const PCUserFans = Loadable({
+    loader: () => import("Components/pc/user/fans"),
+    loading: MyLoadingComponent
+});
 //代办事项
 const PCTodoItems = Loadable({
     loader: () => import("Components/pc/todoList/pc_todoItems"),
@@ -121,6 +130,18 @@ const routes = [
         path: '/user/event',
         exact: true,
         component: PCUserEvent
+    },
+    //关注 
+    {
+        path: '/user/follows',
+        exact: true,
+        component: PCUserFollows
+    },
+    //粉丝 
+    {
+        path: '/user/fans',
+        exact: true,
+        component: PCUserFans
     },
     //代办事项
     {
