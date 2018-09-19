@@ -1,12 +1,58 @@
 import React from 'react';
-import {Layout,Collapse} from 'antd';
+import {Layout,Collapse,Button,Icon} from 'antd';
 import PCHeader from 'Components/pc/pc_header';
 import PCContent from 'Components/pc/pc_content';
 import PCUserHead from 'Components/pc/user/head';
 const {Footer} = Layout;
 const {Panel} = Collapse;
-// import 'Style/common.scss';
-// import 'Style/pc/userEvent.scss';
+import 'Style/pc/userFans.scss';
+
+const followsList = [
+    {
+        id: 1,
+        name: 'Lwanyoz',
+        url: './src/images/fans/fan1.jpg',
+        event: 216,
+        follows: 32,
+        fans: 5,
+        desc: '我没喜欢猫 我只喜欢你',
+        youFollowed: true,
+        followYou: false
+    },
+    {
+        id: 2,
+        name: '甜度百分百qwq',
+        url: './src/images/fans/fan2.jpg',
+        event: 0,
+        follows: 4,
+        fans: 2,
+        desc: '原来是可爱的你来了鸭qwq///',
+        youFollowed: true,
+        followYou: true
+    },
+    {
+        id: 3,
+        name: '-沐璃w',
+        url: './src/images/fans/fan3.jpg',
+        event: 5,
+        follows: 14,
+        fans: 14799,
+        desc: '心 如 明 月 意 朦 胧',
+        youFollowed: true,
+        followYou: false
+    },
+    {
+        id: 41,
+        name: '咖啡杯杯里的茶',
+        url: './src/images/fans/fan4.jpg',
+        event: 24,
+        follows: 41,
+        fans: 6,
+        desc: '喜欢向日葵、小鹿和蒲公英，喜欢积极有生命力的事物。想要很多，实现的却不多，虽然我很笨，但我一直在路上。喜欢简单安静的生活。向太阳和生活致敬！',
+        youFollowed: true,
+        followYou: false
+    }  
+]
 
 export default class PCUserFollows extends React.Component{
     constructor(props){
@@ -22,56 +68,74 @@ export default class PCUserFollows extends React.Component{
                     <PCUserHead />
 
                      <Collapse defaultActiveKey={["1"]}>   
-                            <Panel header="关注（1）" key="1">                                       
-                                <div>
-                                    {/* <ul>
-                                        <li className="last ">
-                                            <a href="/user/home?id=504044769" className="ava f-pr" title="怕不是Tokyo">
-                                                <img src="http://p1.music.126.net/rRgvyp9Q81KEn39VJKFQAw==/109951163528505677.jpg?param=60y60" />
-                                            </a>
-                                            <div className="info">
-                                                <p>
-                                                    <a href="/user/home?id=504044769" className="s-fc7 f-fs1 nm f-thide" title="怕不是Tokyo">
-                                                        怕不是Tokyo
-                                                    </a>
-                                                    <sup className="u-icn u-icn-84 "></sup>
-                                                    <i className="icn u-icn u-icn-s-00"></i>
-                                                </p>
-                                                <p>
-                                                    <a href="/user/event?id=504044769">
-                                                        动态<em className="s-fc7">5</em>
-                                                    </a>
-                                                    <span className="line">|</span>
-                                                    <a href="/user/follows?id=504044769">
-                                                        关注<em className="s-fc7">14</em>
-                                                    </a>
-                                                    <span className="line">|</span>
-                                                    <a href="/user/fans?id=504044769">
-                                                        粉丝<em className="s-fc7">14799</em>
-                                                    </a>
-                                                </p>
-                                                <p className="s-fc3 f-thide">
-                                                    我就是这么一个人，讲起来挺没劲的。
-                                                </p>
-                                            </div>
-                                            <div className="oper" id="oper_504044769">
-                                                <a className="u-btn u-btn-7 f-tdn" href="#" data-action="send" data-userid="504044769" data-nickname="怕不是Tokyo">
-                                                    <i>发私信</i>
-                                                </a>
-                                                <p className="s-fc4">
-                                                    <i className="u-icn u-icn-67"></i>
-                                                    已关注
-                                                </p>
-                                                <p className="s-fc4" style={{display:'none'}}>
-                                                    <i className="u-icn u-icn-66"></i> 
-                                                    相互关注
-                                                </p>
-                                                <a className="u-btn u-btn-8 f-tdn" href="#" data-action="follow" data-userid="504044769" style={{display:'none'}}>
-                                                    关 注
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul> */}
+                            <Panel header={`关注（${followsList.length}）`} key="1">                                       
+                                <div className="user-fans-content">
+                                    <ul>
+                                        {
+                                            followsList && followsList.length ?
+                                                followsList.map((info,key) => {
+                                                    return (
+                                                        <li key={key}>
+                                                            <a href={`/user/home?id=${info.id}`} className="ava f-pr" title={info.name||''}>
+                                                                <img src={info.url||''} />
+                                                            </a>
+                                                            <div className="info">
+                                                                <p>
+                                                                    <a href={`/user/home?id=${info.id}`} className="s-fc7 f-thide fs-14px name" title={info.name||''}>
+                                                                        {info.name||''}
+                                                                    </a>
+                                                                    <sup className="u-icn u-icn-84 "></sup>
+                                                                    <i className="icn u-icn u-icn-s-00"></i>
+                                                                </p>
+                                                                <p>
+                                                                    <a href={`/user/event?id=${info.id}`}>
+                                                                        动态<em className="s-fc7">{info.event||0}</em>
+                                                                    </a>
+                                                                    <span className="line">|</span>
+                                                                    <a href={`/user/follows?id=${info.id}`}>
+                                                                        关注<em className="s-fc7">{info.follows||0}</em>
+                                                                    </a>
+                                                                    <span className="line">|</span>
+                                                                    <a href={`/user/fans?id=${info.id}`}>
+                                                                        粉丝<em className="s-fc7">{info.fans||0}</em>
+                                                                    </a>
+                                                                </p>
+                                                                <p className="s-fc3 f-thide">
+                                                                    {info.desc||''}
+                                                                </p>
+                                                            </div>
+                                                            <div className="oper" id="oper_504044769">
+                                                                {
+                                                                  info.youFollowed ?
+                                                                    <Button className="btn">
+                                                                        <Icon type="mail" />发私信
+                                                                    </Button>
+                                                                  : ''  
+                                                                }
+                                                               
+                                                                {
+                                                                    info.followYou && info.youFollowed ?
+                                                                        <p className="s-fc4">
+                                                                            <Icon type="swap" />相互关注
+                                                                        </p>
+                                                                    : 
+                                                                        info.youFollowed ?
+                                                                            <p className="s-fc4">
+                                                                                <Icon type="check" />已关注
+                                                                            </p>
+                                                                        :
+                                                                            <Button className="btn">
+                                                                                <Icon type="plus" />关注
+                                                                            </Button> 
+                                                                }                                                              
+                                                            </div>
+                                                        </li>
+                                                    )
+                                                })
+                                                
+                                            : ''
+                                        }                                      
+                                    </ul>
                                 </div>
                             </Panel>  
                         </Collapse>  

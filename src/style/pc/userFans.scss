@@ -1,0 +1,98 @@
+.user-fans-content{
+    ul{
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        li{           
+            float: left;
+            height: 80px;
+            border: 1px solid #d5d5d5;
+            margin: 0 5px 15px;
+            padding: 5px;
+            list-style: none;
+
+            .ava, .ava img {
+                float: left;
+                width: 70px;
+                height: 70px;
+            }
+            
+            .f-pr {
+                position: relative;
+                zoom: 1;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #333;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: #333;
+                }
+            }
+
+            .info {
+                float: left;
+                width: 280px;
+                margin-left: 10px;
+
+                p {
+                    margin-bottom: 6px;
+                    font-size: 12px;
+                }
+
+                .line {
+                    margin: 0 8px;
+                    color: #999;
+                }
+
+                .name{
+                    display: inline-block;
+                    max-width: 260px;
+                    vertical-align: middle;
+                }
+            }
+
+            .oper {
+                float: right;
+                width: 100px;
+                // padding-top: 5px;
+                font-size: 12px;
+
+                p {
+                    margin-top: 5px;
+                    text-align: center;
+                }
+
+                .btn{
+                    width: 100px;
+                }
+            }
+            
+            .s-fc3, a.s-fc3:hover {
+                color: #666;
+            }
+
+            .s-fc4, a.s-fc4:hover {             
+                color: #999;
+            }
+
+            .s-fc7, a.s-fc7:hover {               
+                color: #0c73c2;
+            }
+
+            .fs-14px{
+                font-size: 14px;
+            }
+
+            .f-thide {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                word-wrap: normal;
+            }
+        }
+    }
+}

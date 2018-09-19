@@ -5,8 +5,7 @@ import PCContent from 'Components/pc/pc_content';
 import PCUserHead from 'Components/pc/user/head';
 const {Footer} = Layout;
 const {Panel} = Collapse;
-import 'Style/common.scss';
-import 'Style/pc/userEvent.scss';
+import 'Style/pc/userFans.scss';
 
 export default class PCUserFans extends React.Component{
     constructor(props){

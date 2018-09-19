@@ -37,7 +37,7 @@ export default class PCUserHead extends React.Component{
                                 :''
                         }
 
-                        <Button className="fr">
+                        <Button style={{float: 'right'}}>
                             编辑个人资料
                         </Button>                          
                     </div>
