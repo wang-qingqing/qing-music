@@ -20,7 +20,7 @@ Mock.mock('/data',{
  * （3）/discover/artist  入驻歌手 (20180916Completed)
  * （4）/user/event  动态  
  * （5）/user/follows  关注 (20180919Completed)
- * （6）/user/fans   粉丝   
+ * （6）/user/fans   粉丝   (20180920Completed)
  * （7）/album?id=   专辑
  * （8）/artist?id=  歌手
  * （9）/discover/playlist/   热门推荐

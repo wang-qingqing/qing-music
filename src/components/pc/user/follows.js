@@ -1,11 +1,11 @@
 import React from 'react';
-import {Layout,Collapse,Button,Icon} from 'antd';
+import {Layout,Collapse} from 'antd';
 import PCHeader from 'Components/pc/pc_header';
 import PCContent from 'Components/pc/pc_content';
 import PCUserHead from 'Components/pc/user/head';
+import PCUserFollowCard from 'Components/pc/user/followCard';
 const {Footer} = Layout;
 const {Panel} = Collapse;
-import 'Style/pc/userFans.scss';
 
 const followsList = [
     {
@@ -40,18 +40,7 @@ const followsList = [
         desc: '心 如 明 月 意 朦 胧',
         youFollowed: true,
         followYou: false
-    },
-    {
-        id: 41,
-        name: '咖啡杯杯里的茶',
-        url: './src/images/fans/fan4.jpg',
-        event: 24,
-        follows: 41,
-        fans: 6,
-        desc: '喜欢向日葵、小鹿和蒲公英，喜欢积极有生命力的事物。想要很多，实现的却不多，虽然我很笨，但我一直在路上。喜欢简单安静的生活。向太阳和生活致敬！',
-        youFollowed: true,
-        followYou: false
-    }  
+    }
 ]
 
 export default class PCUserFollows extends React.Component{
@@ -69,74 +58,7 @@ export default class PCUserFollows extends React.Component{
 
                      <Collapse defaultActiveKey={["1"]}>   
                             <Panel header={`关注（${followsList.length}）`} key="1">                                       
-                                <div className="user-fans-content">
-                                    <ul>
-                                        {
-                                            followsList && followsList.length ?
-                                                followsList.map((info,key) => {
-                                                    return (
-                                                        <li key={key}>
-                                                            <a href={`/user/home?id=${info.id}`} className="ava f-pr" title={info.name||''}>
-                                                                <img src={info.url||''} />
-                                                            </a>
-                                                            <div className="info">
-                                                                <p>
-                                                                    <a href={`/user/home?id=${info.id}`} className="s-fc7 f-thide fs-14px name" title={info.name||''}>
-                                                                        {info.name||''}
-                                                                    </a>
-                                                                    <sup className="u-icn u-icn-84 "></sup>
-                                                                    <i className="icn u-icn u-icn-s-00"></i>
-                                                                </p>
-                                                                <p>
-                                                                    <a href={`/user/event?id=${info.id}`}>
-                                                                        动态<em className="s-fc7">{info.event||0}</em>
-                                                                    </a>
-                                                                    <span className="line">|</span>
-                                                                    <a href={`/user/follows?id=${info.id}`}>
-                                                                        关注<em className="s-fc7">{info.follows||0}</em>
-                                                                    </a>
-                                                                    <span className="line">|</span>
-                                                                    <a href={`/user/fans?id=${info.id}`}>
-                                                                        粉丝<em className="s-fc7">{info.fans||0}</em>
-                                                                    </a>
-                                                                </p>
-                                                                <p className="s-fc3 f-thide">
-                                                                    {info.desc||''}
-                                                                </p>
-                                                            </div>
-                                                            <div className="oper" id="oper_504044769">
-                                                                {
-                                                                  info.youFollowed ?
-                                                                    <Button className="btn">
-                                                                        <Icon type="mail" />发私信
-                                                                    </Button>
-                                                                  : ''  
-                                                                }
-                                                               
-                                                                {
-                                                                    info.followYou && info.youFollowed ?
-                                                                        <p className="s-fc4">
-                                                                            <Icon type="swap" />相互关注
-                                                                        </p>
-                                                                    : 
-                                                                        info.youFollowed ?
-                                                                            <p className="s-fc4">
-                                                                                <Icon type="check" />已关注
-                                                                            </p>
-                                                                        :
-                                                                            <Button className="btn">
-                                                                                <Icon type="plus" />关注
-                                                                            </Button> 
-                                                                }                                                              
-                                                            </div>
-                                                        </li>
-                                                    )
-                                                })
-                                                
-                                            : ''
-                                        }                                      
-                                    </ul>
-                                </div>
+                                <PCUserFollowCard followsList={followsList} />
                             </Panel>  
                         </Collapse>  
                 </div>

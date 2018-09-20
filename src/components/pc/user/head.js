@@ -11,8 +11,8 @@ const userInfo = { //用户的相关信息
     level: 8, //等级
     sex: 2,//性别 1男2女
     eventCount: 10, //动态
-    followCount: 100, //关注
-    fansCount: 66 //粉丝
+    followCount: 3, //关注
+    fansCount: 2 //粉丝
 }
 
 export default class PCUserHead extends React.Component{
