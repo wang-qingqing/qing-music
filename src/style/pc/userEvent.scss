@@ -1,7 +1,235 @@
 .user-content{
+    a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+    }
+
     .event-content{
         float: left;
         width: 725px;
+
+        .m-dlist {
+            position: relative;
+            margin-left: -16px;
+            padding: 0;
+
+            .itm {
+                position: relative;
+                margin: 0 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #e8e8e9;
+            }
+
+            li{
+                list-style: none;
+            }
+
+            .gface {
+                width: 54px;
+            }
+            
+            .ficon {
+                float: left;
+                position: relative;
+                zoom: 1;
+                width: 45px;
+                height: 45px;
+            }
+
+            .ficon img, .src .cover img {
+                display: block;
+                width: 100%;
+            }
+
+            .gcnt {
+                position: relative;
+                zoom: 1;
+                margin-left: 55px;
+                padding-top: 4px;
+            }
+
+            .f-fs1 {
+                font-size: 14px;
+            }
+
+            .f-pr {
+                position: relative;
+                zoom: 1;
+            }
+
+            .time {
+                margin-top: 7px;
+                font-size: 12px;
+            }
+
+            .text {
+                margin-top: 10px;
+                line-height: 24px;
+                font-size: 14px;
+                word-break: break-word;
+            }
+
+            .f-brk {
+                word-wrap: break-word;
+                word-break: break-word;
+                white-space: normal;
+            }
+
+            .doper {
+                margin: 18px 0 -2px;
+                text-align: right;
+                line-height: normal;
+
+                .line {
+                    color: #c7c7c7;
+                    margin: 0 10px 0 12px;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+                top: -3px;
+                right: -3px;
+                cursor: pointer;
+            }
+            
+            .u-dicn-2 {
+                width: 19px;
+                height: 19px;
+                background-position: -15px 0;
+            }
+
+            .u-dicn {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .mng {
+                background: #fff;
+                border: 1px solid #cccfd9;
+                box-shadow: 0 0 4px rgba(0,0,0,0.1);
+            }
+            
+            .mng {
+                width: 105px;
+                position: absolute;
+                top: 23px;
+                right: 3px;
+
+               li, .li {
+                    float: left;
+                    width: 105px;
+                    height: 30px;
+                    overflow: hidden;
+                    line-height: 31px;
+                }
+                
+            }
+            .src {
+                display: block;
+                // position: relative;
+                padding: 10px;
+                margin: 4px 0 5px;
+                background: #f5f5f5;
+                
+                .cover {
+                    // position: relative;
+                    // zoom: 1;
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    // float: left;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    .ply {
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 40px;
+                        height: 40px;
+                        margin: 0;
+                        background-position: -100px -70px;
+                        _background-position: 0 0;
+                        opacity: 0.8;
+                        filter: Alpha(opacity=80);
+                        cursor: pointer;
+                    }
+                }
+
+                .cover-ply .ply {
+                    display: block;
+                    z-index: 200;
+                }
+
+                .scnt {
+                    display: inline-block;
+                    // position: absolute;
+                    // top: 10px;
+                    // left: 60px;
+                    // right: 30px;
+                    // height: 40px;
+                    line-height: 22px;
+                    margin-left: 10px;
+                }
+        
+            }
+
+            .f-thide {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                word-wrap: normal;
+            }
+
+            .f-fs1 {
+                font-size: 14px;
+            }
+
+            .s-fc1 {
+                color: #333;
+            }
+
+            .type .sep {
+                margin-left: 5px;
+            }
+
+            .f-hide, .js-hide {
+                display: none !important;
+            }
+
+            .s-fc3, a.s-fc3:hover {
+                color: #666;
+                font-size: 12px;
+            }
+
+            .s-fc4, a.s-fc4:hover {
+                color: #999;
+            }
+
+            .m-timeline .dsup {
+                margin: 30px 0;
+            }
+
+            .s-fc7, a.s-fc7:hover{
+                color: #0c73c2;
+                font-size: 12px;
+            }  
+            
+            .fs-14px {
+                font-size: 14px;
+            }
+        }
+
     }
     
     .right-content{
@@ -50,16 +278,6 @@
                     word-wrap: normal;
                 }
                 
-            }
-
-            a {
-                text-decoration: none;
-                color: #333;
-
-                &:hover {
-                    text-decoration: underline;
-                    color: #333;
-                }
             }
 
             .brief-image {
