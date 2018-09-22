@@ -17,9 +17,14 @@ const currentUserInfo = {
 
 const eventList= [
     {
-        id: 1,
         time: '2018-01-08 08:08:00',
         action: '分享单曲',
+        shareText: '打卡'
+    },
+    {
+        time: '2018-09-09 00:10:00',
+        action: '分享动态',
+        shareText: '测试一下啦'
     },
 ]
 
@@ -60,77 +65,85 @@ export default class PCUserEvent extends React.Component{
                     <PCUserHead />
 
                      <Collapse defaultActiveKey={["1"]}>   
-                            <Panel header="我的动态（1）" key="1">                                       
+                            <Panel header={`我的动态（${eventList.length}）`} key="1">                                       
                                 <div className="event-content">
                                     <ul className="m-dlist">
-                                        <li className="itm">
-                                            <div className="gface">
-                                                <a href="/user/home?id=90262870" className="ficon">
-                                                    <img src="http://p1.music.126.net/gVaOz5dnkiwN1ym83TLCVg==/109951163422755900.jpg?param=45y45" />
-                                                </a>
-                                            </div>
-                                            <div className="gcnt">
-                                                <div>
-                                                    <div className="type f-pr f-fs1">
-                                                        <a href="/user/home?id=90262870" className="s-fc7 fs-14px">元气少女小七</a>
-                                                        <span className="sep s-fc3 fs-14px">分享单曲</span>
-                                                    </div>
-                                                    <div className="time">
-                                                        <a className="s-fc4" data-action="logdetail" href="/event?id=3452845270&amp;uid=90262870">1月6日 08:08</a>
-                                                    </div>
-                                                    <div className="text f-fs1  f-brk j-text">SA打卡
-                                                        <img src="http://s1.music.126.net/style/web2/emt/emoji_33.png" />
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <div className="src f-cb">
-                                                                <div className="cover cover-ply">
-                                                                    <span className="lnk">
-                                                                        <img src="http://p1.music.126.net/dy1KyZH4VFfzA2yZKdZ1zQ==/109951163100798573.jpg?param=40y40&amp;quality=100" />
-                                                                    </span>
-                                                                    <a href="javascript:" data-log="event" data-event-id="3452845270" className="ply u-dicn u-dicn-8 f-alpha"
-                                                                        data-res-action="play" data-res-type="18" data-res-id="528494292"></a>
-                                                                </div>
-                                                                <div className="scnt">
-                                                                    <div className="tit f-thide f-fs1">
-                                                                        <a href="/song?id=528494292" className="s-fc1" data-log="event" data-event-id="3452845270">一个叫南七技校的地方</a>
+                                        {
+                                            eventList && eventList.length ?
+                                                eventList.map((event,key) => {
+                                                    return (
+                                                        <li className="itm" key={key} >
+                                                            <div className="gface">
+                                                                <a href={`/user/home?id=${currentUserInfo.id}`} className="ficon">
+                                                                    <img src={currentUserInfo.url||''} />
+                                                                </a>
+                                                            </div>
+                                                            <div className="gcnt">
+                                                                <div>
+                                                                    <div className="type f-pr f-fs1">
+                                                                        <a href={`/user/home?id=${currentUserInfo.id}`} className="s-fc7 fs-14px">{currentUserInfo.name||''}</a>
+                                                                        <span className="sep s-fc3 fs-14px">{event.action||''}</span>
                                                                     </div>
-                                                                    <div className="from f-thide s-fc3">
-                                                                        <span className="s-fc3">俞涛</span>
+                                                                    <div className="time">
+                                                                        <a className="s-fc4" data-action="logdetail" href="/event?id=3452845270&amp;uid=90262870">{event.time}</a>
                                                                     </div>
+                                                                    <div className="text f-fs1  f-brk j-text">
+                                                                        {event.shareText||''}
+                                                                    </div>
+                                                                    <div>
+                                                                        <div>
+                                                                            <div className="src f-cb">
+                                                                                <div className="cover cover-ply">
+                                                                                    <span className="lnk">
+                                                                                        <img src="http://p1.music.126.net/dy1KyZH4VFfzA2yZKdZ1zQ==/109951163100798573.jpg?param=40y40&amp;quality=100" />
+                                                                                    </span>
+                                                                                    <a href="javascript:" data-log="event" data-event-id="3452845270" className="ply u-dicn u-dicn-8 f-alpha"
+                                                                                        data-res-action="play" data-res-type="18" data-res-id="528494292"></a>
+                                                                                </div>
+                                                                                <div className="scnt">
+                                                                                    <div className="tit f-thide f-fs1">
+                                                                                        <a href="/song?id=528494292" className="s-fc1" data-log="event" data-event-id="3452845270">一个叫南七技校的地方</a>
+                                                                                    </div>
+                                                                                    <div className="from f-thide s-fc3">
+                                                                                        <span className="s-fc3">俞涛</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="doper">
+                                                                        <a href="javascript:" className="s-fc7" data-action="like">
+                                                                            <i className="icn u-dicn u-dicn-4"></i>
+                                                                            <span data-count="1">(1)</span>
+                                                                        </a>
+                                                                        <span className="line">|</span>
+                                                                        <a href="javascript:" className="s-fc7" data-action="forward">转发
+                                                                            <span className="f-hide" data-count="0">(0)</span>
+                                                                        </a>
+                                                                        <span className="line">|</span>
+                                                                        <a href="javascript:" className="s-fc7" data-action="comment">评论
+                                                                            <span className="f-hide" data-count="0">(0)</span>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div className="arrow u-dicn u-dicn-2" style={{display: 'block'}} data-action="unfold" title="动态管理">
+                                                                        <ul className="mng f-hide">
+                                                                            <li>
+                                                                                <a href="javascript:" className="li f-fl s-fc3" data-action="delete">
+                                                                                    <i className="icn u-dicn u-dicn-27 f-fl"></i>删除</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div className="dsup f-hide">赞：
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <div className="f-hide"></div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="doper">
-                                                        <a href="javascript:" className="s-fc7" data-action="like">
-                                                            <i className="icn u-dicn u-dicn-4"></i>
-                                                            <span data-count="1">(1)</span>
-                                                        </a>
-                                                        <span className="line">|</span>
-                                                        <a href="javascript:" className="s-fc7" data-action="forward">转发
-                                                            <span className="f-hide" data-count="0">(0)</span>
-                                                        </a>
-                                                        <span className="line">|</span>
-                                                        <a href="javascript:" className="s-fc7" data-action="comment">评论
-                                                            <span className="f-hide" data-count="0">(0)</span>
-                                                        </a>
-                                                    </div>
-                                                    <div className="arrow u-dicn u-dicn-2" style={{display: 'block'}} data-action="unfold" title="动态管理">
-                                                        <ul className="mng f-hide">
-                                                            <li>
-                                                                <a href="javascript:" className="li f-fl s-fc3" data-action="delete">
-                                                                    <i className="icn u-dicn u-dicn-27 f-fl"></i>删除</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="dsup f-hide">赞：
-                                                        <span></span>
-                                                    </div>
-                                                    <div className="f-hide"></div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                                        </li>
+                                                    )                                                   
+                                                })
+                                            :''
+                                        }                                    
                                     </ul>
                                 </div>
 
