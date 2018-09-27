@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import {Layout,Collapse,Button,Icon} from 'antd';
 import PCHeader from 'Components/pc/pc_header';
 import PCContent from 'Components/pc/pc_content';
@@ -19,12 +20,30 @@ const eventList= [
     {
         time: '2018-01-08 08:08:00',
         action: '分享单曲',
-        shareText: '打卡'
+        shareText: '打卡',
+        likeCount: 66,
+        forwardCount: 12,
+        commentCount: 10,
+        original:{
+            id: 123,
+            name: '一个叫南七技校的地方',
+            author: '俞涛',
+            imgUrl: 'http://p1.music.126.net/dy1KyZH4VFfzA2yZKdZ1zQ==/109951163100798573.jpg?param=40y40&amp;quality=100'
+        }
     },
     {
-        time: '2018-09-09 00:10:00',
-        action: '分享动态',
-        shareText: '测试一下啦'
+        time: '2017-02-10 22:19:00',
+        action: '分享专辑',
+        shareText: '',
+        likeCount: 12,
+        forwardCount: 78,
+        commentCount: 9,
+        original:{
+            id: 666,
+            name: '射雕英雄传',
+            author: '罗文',
+            imgUrl: 'http://p1.music.126.net/74X5FfsN6A_Wg1xvDgCfQQ==/79164837200575.jpg?param=40y40&quality=100'
+        }
     },
 ]
 
@@ -84,47 +103,61 @@ export default class PCUserEvent extends React.Component{
                                                                         <a href={`/user/home?id=${currentUserInfo.id}`} className="s-fc7 fs-14px">{currentUserInfo.name||''}</a>
                                                                         <span className="sep s-fc3 fs-14px">{event.action||''}</span>
                                                                     </div>
-                                                                    <div className="time">
-                                                                        <a className="s-fc4" data-action="logdetail" href="/event?id=3452845270&amp;uid=90262870">{event.time}</a>
+                                                                    <div className="time">        
+                                                                        {moment(event.time).format("YYYY-MM-DD")} 
                                                                     </div>
                                                                     <div className="text f-fs1  f-brk j-text">
                                                                         {event.shareText||''}
                                                                     </div>
-                                                                    <div>
-                                                                        <div>
+                                                                    {
+                                                                        event.original?
                                                                             <div className="src f-cb">
                                                                                 <div className="cover cover-ply">
                                                                                     <span className="lnk">
-                                                                                        <img src="http://p1.music.126.net/dy1KyZH4VFfzA2yZKdZ1zQ==/109951163100798573.jpg?param=40y40&amp;quality=100" />
+                                                                                        <img src={event.original.imgUrl} />
                                                                                     </span>
-                                                                                    <a href="javascript:" data-log="event" data-event-id="3452845270" className="ply u-dicn u-dicn-8 f-alpha"
-                                                                                        data-res-action="play" data-res-type="18" data-res-id="528494292"></a>
+                                                                                    <a href="javascript:" className="ply u-dicn u-dicn-8 f-alpha"></a>
                                                                                 </div>
                                                                                 <div className="scnt">
                                                                                     <div className="tit f-thide f-fs1">
-                                                                                        <a href="/song?id=528494292" className="s-fc1" data-log="event" data-event-id="3452845270">一个叫南七技校的地方</a>
+                                                                                        <a href={`/song?id=${event.original.id}`} className="s-fc1">{event.original.name}</a>
                                                                                     </div>
                                                                                     <div className="from f-thide s-fc3">
-                                                                                        <span className="s-fc3">俞涛</span>
+                                                                                        <span className="s-fc3">{event.original.author}</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </div>
+                                                                        :'' 
+                                                                    }                                                        
                                                                     <div className="doper">
-                                                                        <a href="javascript:" className="s-fc7" data-action="like">
-                                                                            <i className="icn u-dicn u-dicn-4"></i>
-                                                                            <span data-count="1">(1)</span>
+                                                                        <a href="javascript:" className="s-fc7">
+                                                                            <Icon type="like" />                                                
+                                                                            {
+                                                                                event.likeCount ?
+                                                                                    <span>({event.likeCount})</span>
+                                                                                :''
+                                                                            }
                                                                         </a>
                                                                         <span className="line">|</span>
-                                                                        <a href="javascript:" className="s-fc7" data-action="forward">转发
-                                                                            <span className="f-hide" data-count="0">(0)</span>
+                                                                        <a href="javascript:" className="s-fc7">
+                                                                            转发
+                                                                            {
+                                                                                event.forwardCount ?
+                                                                                    <span>({event.forwardCount})</span>
+                                                                                :''
+                                                                            }
                                                                         </a>
                                                                         <span className="line">|</span>
-                                                                        <a href="javascript:" className="s-fc7" data-action="comment">评论
-                                                                            <span className="f-hide" data-count="0">(0)</span>
+                                                                        <a href="javascript:" className="s-fc7">
+                                                                            评论
+                                                                            {
+                                                                                event.commentCount ?
+                                                                                    <span>({event.commentCount})</span>
+                                                                                :''
+                                                                            }
                                                                         </a>
                                                                     </div>
+                                                                    {/* 评论区 TODO */}
                                                                     <div className="arrow u-dicn u-dicn-2" style={{display: 'block'}} data-action="unfold" title="动态管理">
                                                                         <ul className="mng f-hide">
                                                                             <li>
