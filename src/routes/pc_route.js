@@ -22,162 +22,124 @@ const MyLoadingComponent = ({ isLoading, error }) => {
     }
 }
 
-//菜单上的组件
-//首页
-const PCMain = Loadable({
-    loader: () => import("Components/pc/pc_main"),
-    loading: MyLoadingComponent
-});
- 
-//列表
-const PCTopList = Loadable({
-    loader: () => import("Components/pc/pc_topList"),
-    loading: MyLoadingComponent
-});
-
-//用户主页
-const PCUserHome = Loadable({
-    loader: () => import("Components/pc/user/home"),
-    loading: MyLoadingComponent
-});
-
-//用户等级
-const PCUserLevel = Loadable({
-    loader: () => import("Components/pc/user/level"),
-    loading: MyLoadingComponent
-});
-
-//用户动态
-const PCUserEvent = Loadable({
-    loader: () => import("Components/pc/user/event"),
-    loading: MyLoadingComponent
-});
-//关注
-const PCUserFollows = Loadable({
-    loader: () => import("Components/pc/user/follows"),
-    loading: MyLoadingComponent
-});
-//粉丝
-const PCUserFans = Loadable({
-    loader: () => import("Components/pc/user/fans"),
-    loading: MyLoadingComponent
-});
-//代办事项
-const PCTodoItems = Loadable({
-    loader: () => import("Components/pc/todoList/pc_todoItems"),
-    loading: MyLoadingComponent
-});
-
-//删除功能
-const CustomDelete = Loadable({
-    loader: () => import("Components/pc/deleteFunction/customDelete"),
-    loading: MyLoadingComponent
-});
-
-//入驻歌手 
-const PCDiscoverArtist = Loadable({
-    loader: () => import("Components/pc/discover/artist"),
-    loading: MyLoadingComponent
-});
-
-//热门推荐
-const PCDiscoverPlaylist = Loadable({
-    loader: () => import("Components/pc/discover/playlist"),
-    loading: MyLoadingComponent
-});
-
-//新碟上架 
-const PCDiscoverAlbum = Loadable({
-    loader: () => import("Components/pc/discover/album"),
-    loading: MyLoadingComponent
-});
-
-//榜单
-const PCDiscoverToplist = Loadable({
-    loader: () => import("Components/pc/discover/toplist"),
-    loading: MyLoadingComponent
-});
-
-
 //路由配置
 const routes = [
     //首页
     {
         path: '/',
         exact: true,
-        component: PCMain
+        component: Loadable({
+            loader: () => import("Components/pc/pc_main"),
+            loading: MyLoadingComponent
+        })
     },
     //列表
     {
         path: '/list',
         exact: true,
-        component: PCTopList
+        component: Loadable({
+            loader: () => import("Components/pc/pc_topList"),
+            loading: MyLoadingComponent
+        })
     },
     //用户主页
     {
         path: '/user/home',
         exact: true,
-        component: PCUserHome
+        component: Loadable({
+            loader: () => import("Components/pc/user/home"),
+            loading: MyLoadingComponent
+        })
     },
     //用户等级
     {
         path: '/user/level',
         extra: true,
-        component: PCUserLevel
+        component: Loadable({
+            loader: () => import("Components/pc/user/level"),
+            loading: MyLoadingComponent
+        })
     },
     //动态 
     {
         path: '/user/event',
         exact: true,
-        component: PCUserEvent
+        component: Loadable({
+            loader: () => import("Components/pc/user/event"),
+            loading: MyLoadingComponent
+        })
     },
     //关注 
     {
         path: '/user/follows',
         exact: true,
-        component: PCUserFollows
+        component: Loadable({
+            loader: () => import("Components/pc/user/follows"),
+            loading: MyLoadingComponent
+        })
     },
     //粉丝 
     {
         path: '/user/fans',
         exact: true,
-        component: PCUserFans
+        component: Loadable({
+            loader: () => import("Components/pc/user/fans"),
+            loading: MyLoadingComponent
+        })
     },
     //代办事项
     {
         path: '/todo',
         exact: true,
-        component: PCTodoItems
+        component: Loadable({
+            loader: () => import("Components/pc/todoList/pc_todoItems"),
+            loading: MyLoadingComponent
+        })
     },
     //删除功能
     {
         path: '/del',
         exact: true,
-        component: CustomDelete
+        component: Loadable({
+            loader: () => import("Components/pc/deleteFunction/customDelete"),
+            loading: MyLoadingComponent
+        })
     },
     //入驻歌手  
     {
         path: '/discover/artist',
         exact: true,
-        component: PCDiscoverArtist
+        component: Loadable({
+            loader: () => import("Components/pc/discover/artist"),
+            loading: MyLoadingComponent
+        })
     },
     //热门推荐 
     {
         path: '/discover/playlist',
         exact: true,
-        component: PCDiscoverPlaylist
+        component: Loadable({
+            loader: () => import("Components/pc/discover/playlist"),
+            loading: MyLoadingComponent
+        })
     },
     //新碟上架 
     {
         path: '/discover/album',
         exact: true,
-        component: PCDiscoverAlbum
+        component: Loadable({
+            loader: () => import("Components/pc/discover/album"),
+            loading: MyLoadingComponent
+        })
     },
     //榜单 
     {
         path: '/discover/toplist',
         exact: true,
-        component: PCDiscoverToplist
+        component: Loadable({
+            loader: () => import("Components/pc/discover/toplist"),
+            loading: MyLoadingComponent
+        })
     },
 ];
 

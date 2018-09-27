@@ -21,15 +21,16 @@ Mock.mock('/data',{
  * （4）/user/event  动态  (20180927Completed)
  * （5）/user/follows  关注 (20180919Completed)
  * （6）/user/fans   粉丝   (20180920Completed)
- * （7）/album?id=   专辑
- * （8）/artist?id=  歌手
- * （9）/discover/playlist/   热门推荐
- * （10）/discover/album/   新碟上架
- * （11）/discover/toplist/  榜单
+ * （7）/discover/playlist/   热门推荐
+ * （8）/discover/album/   新碟上架
+ * （9）/discover/toplist/  榜单
+ * （10）/album?id=   专辑
+ * （11）/artist?id=  歌手
  * （12）/my   我的
  * （13）/friend  朋友
  * （14）/store  商城
  * （15）/musician  音乐人
  * （16）/download 下载客户端
+ * （17）/level/details  等级详情
  * 
  */

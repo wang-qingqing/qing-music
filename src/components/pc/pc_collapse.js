@@ -15,7 +15,7 @@ const panelModules = [
         type: 1,//1:推荐 2：新碟 3：榜单
         name: '热门推荐',
         showMore: true,
-        showMoreUrl: '/discover/playlist/',
+        showMoreUrl: '/#/discover/playlist/',
         cardList: [
             {
                 title: '本宝宝终于找到了适合自己的BGM',
@@ -81,14 +81,14 @@ const panelModules = [
         type: 2,
         name: '新碟上架',
         showMore: true,
-        showMoreUrl: '/discover/album/'
+        showMoreUrl: '/#/discover/album/'
     },
     {
         key: 4,
         type: 3,
         name: '榜单',
         showMore: true, 
-        showMoreUrl: '/discover/toplist/'
+        showMoreUrl: '/#/discover/toplist/'
     }
 ]
 //自定义默认展开的模块
