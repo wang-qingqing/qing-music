@@ -33,7 +33,8 @@ module.exports = {
                         ],
                         "plugins": [
                             "transform-decorators-legacy",
-                            "transform-decorators"                
+                            "transform-decorators",
+                            ["import", { libraryName: "antd-mobile", style: "css" }]             
                         ]
                     }
                 }

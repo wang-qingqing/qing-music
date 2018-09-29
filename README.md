@@ -157,7 +157,19 @@
   
   >https://segmentfault.com/q/1010000008427064
 
- 
+8、移动端使用antd-mobile
+
+  (1)yarn add antd-mobile
+
+  (2)按需加载组件：
+    A.在webpack.config.js中增加
+      {
+        "plugins": [
+          ["import", { libraryName: "antd-mobile", style: "css" }]
+        ]
+      }
+
+    B.yarn add babel-plugin-import
 
 
 
