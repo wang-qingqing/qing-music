@@ -1,6 +1,8 @@
 import React from 'react';
-import { Flex, WhiteSpace,PullToRefresh } from 'antd-mobile';
-
+import { PullToRefresh } from 'antd-mobile';
+import MobileHeader from 'Components/mobile/mobile_header';
+import MobileContent from 'Components/mobile/mobile_content';
+import MobileFooter from 'Components/mobile/mobile_footer';
 import "Style/mobile/index.scss";
 
 const PlaceHolder = ({ className = '', ...restProps }) => (
@@ -16,10 +18,6 @@ export default class MobileMain extends  React.Component{
             height: document.documentElement.clientHeight,
             data: [],
         };
-    }
-
-    componentDidMount(){
-
     }
 
     render(){
@@ -47,16 +45,9 @@ export default class MobileMain extends  React.Component{
                 }}
             >
                 <div>
-                    <Flex>
-                        <Flex.Item>个性推荐</Flex.Item>
-                    </Flex>
-                    <WhiteSpace size="lg" />
-                    <Flex>
-                        <Flex.Item>推荐的内容</Flex.Item>
-                    </Flex>
-                    <Flex>
-                        <Flex.Item>推荐的内容</Flex.Item>
-                    </Flex>
+                    <MobileHeader />
+                    <MobileContent />
+                    <MobileFooter />
                 </div>
             </PullToRefresh>   
         )
